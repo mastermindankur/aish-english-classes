@@ -247,9 +247,150 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     7. Formulario cambiado a Google Forms
-     (Lógica de validación personalizada eliminada)
+     7. Form Validation & Submission (Web3Forms Integration)
      ========================================================================== */
+  const form = document.getElementById('lead-form');
+  const formSuccess = document.getElementById('form-success');
+  const submitBtn = document.getElementById('submit-btn');
+  const resetFormBtn = document.getElementById('reset-form-btn');
+
+  if (form) {
+    const fields = {
+      name: {
+        input: document.getElementById('name'),
+        error: document.getElementById('name-error'),
+        validate() {
+          if (!this.input.value.trim()) {
+            this.showError('El nombre es obligatorio.');
+            return false;
+          }
+          this.clearError();
+          return true;
+        }
+      },
+      email: {
+        input: document.getElementById('email'),
+        error: document.getElementById('email-error'),
+        validate() {
+          const value = this.input.value.trim();
+          if (!value) {
+            this.showError('El correo electrónico es obligatorio.');
+            return false;
+          }
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            this.showError('Introduce un correo electrónico válido (ej. nombre@correo.com).');
+            return false;
+          }
+          this.clearError();
+          return true;
+        }
+      },
+      phone: {
+        input: document.getElementById('phone'),
+        error: document.getElementById('phone-error'),
+        validate() {
+          const value = this.input.value.trim();
+          if (!value) {
+            this.showError('El número de WhatsApp es obligatorio.');
+            return false;
+          }
+          const digits = value.replace(/\D/g, '');
+          if (digits.length < 9) {
+            this.showError('Introduce un número válido (mínimo 9 dígitos).');
+            return false;
+          }
+          this.clearError();
+          return true;
+        }
+      }
+    };
+
+    Object.keys(fields).forEach(key => {
+      const field = fields[key];
+
+      field.showError = (msg) => {
+        field.error.textContent = msg;
+        field.error.classList.add('visible');
+        field.input.closest('.form-group').classList.add('has-error');
+        field.input.setAttribute('aria-invalid', 'true');
+      };
+
+      field.clearError = () => {
+        field.error.textContent = '';
+        field.error.classList.remove('visible');
+        field.input.closest('.form-group').classList.remove('has-error');
+        field.input.removeAttribute('aria-invalid');
+      };
+
+      field.input.addEventListener('blur', () => { field.validate(); });
+      field.input.addEventListener('input', () => {
+        if (field.input.value.trim() !== '') field.clearError();
+      });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const honeypot = document.getElementById('website_url').value;
+      if (honeypot) { showSuccessView(); return; }
+
+      let isValid = true;
+      Object.keys(fields).forEach(key => {
+        if (!fields[key].validate()) isValid = false;
+      });
+
+      if (!isValid) {
+        const firstInvalid = Object.keys(fields).find(key => !fields[key].validate());
+        if (firstInvalid) fields[firstInvalid].input.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.querySelector('.btn-text').classList.add('hidden');
+      submitBtn.querySelector('.spinner').classList.remove('hidden');
+
+      // Send to Web3Forms
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          showSuccessView();
+        } else {
+          alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
+          submitBtn.disabled = false;
+          submitBtn.querySelector('.btn-text').classList.remove('hidden');
+          submitBtn.querySelector('.spinner').classList.add('hidden');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Hubo un error de conexión. Por favor, revisa tu internet y prueba de nuevo.');
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.btn-text').classList.remove('hidden');
+        submitBtn.querySelector('.spinner').classList.add('hidden');
+      }
+    });
+
+    resetFormBtn.addEventListener('click', () => {
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.querySelector('.btn-text').classList.remove('hidden');
+      submitBtn.querySelector('.spinner').classList.add('hidden');
+      Object.keys(fields).forEach(key => fields[key].clearError());
+      formSuccess.classList.add('hidden');
+      form.classList.remove('hidden');
+    });
+
+    function showSuccessView() {
+      form.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+    }
+  }
 
   function saveLead(newLead) {
     const currentLeads = JSON.parse(localStorage.getItem('aish_english_leads')) || [];

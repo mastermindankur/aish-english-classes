@@ -408,18 +408,72 @@
           </div>
         </div>
 
-        <div class="form-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 4rem 2rem;">
-          <span style="font-size: 3.5rem; margin-bottom: 1rem;">📝</span>
-          <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Formulario de Inscripción</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">
-            Para agilizar el proceso y reservar tu plaza, por favor completa tus datos en el siguiente formulario seguro.
-          </p>
-          <a href="URL_DEL_GOOGLE_FORM_AQUI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-shine" style="width: 100%; display: flex; justify-content: center;">
-            <span class="btn-text">Abrir Formulario de Google</span>
-          </a>
-          <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 1rem;">
-            Se abrirá en una nueva pestaña (Google Forms)
-          </p>
+        <div class="form-container">
+          <form id="lead-form" novalidate>
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="fddb290d-e6b0-4863-b875-90d22efd207b">
+            <!-- Web3Forms subject -->
+            <input type="hidden" name="subject" value="¡NUEVO ESTUDIANTE! Solicitud desde Aish English">
+            
+            <!-- Honeypot field for spam prevention -->
+            <div class="visually-hidden">
+              <label for="website_url">No rellenar este campo</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="name">Tu Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ej. María García">
+              <span class="error-msg" id="name-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="Ej. maria@correo.com">
+              <span class="error-msg" id="email-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Número de WhatsApp</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="Ej. 600 000 000">
+              <span class="error-msg" id="phone-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Custom radio groups styling -->
+            <fieldset class="form-group fieldset-group">
+              <legend>¿Cuál es tu nivel de inglés actual?</legend>
+              <div class="radio-grid">
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Principiante (A1-A2)" checked>
+                  <span>Principiante (A1-A2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Intermedio (B1-B2)">
+                  <span>Intermedio (B1-B2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Avanzado (C1-C2)">
+                  <span>Avanzado (C1-C2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-block btn-shine" id="submit-btn" style="margin-top: 1rem;">
+              <span class="btn-text">Reservar mi plaza por WhatsApp</span>
+              <span class="spinner hidden"></span>
+            </button>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem;">
+              🔒 Te contactaré por WhatsApp en menos de 24 horas. Tus datos están 100% seguros.
+            </p>
+          </form>
+
+          <!-- Success Alert Container -->
+          <div id="form-success" class="success-container hidden">
+            <div class="success-icon">🎉</div>
+            <h3>¡Plaza Reservada!</h3>
+            <p>Gracias por tu interés. He guardado tu solicitud correctamente. Te contactaré en menos de 24 horas por WhatsApp para asignarte un grupo adecuado a tu nivel.</p>
+            <button class="btn btn-outline" id="reset-form-btn">Enviar otra solicitud</button>
+          </div>
         </div>
       </div>
     </section>
