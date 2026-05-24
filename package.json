@@ -1,0 +1,8 @@
+{
+  "name": "aish-english-classes-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for Aishwarya's English classes",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000"
+  }
+}

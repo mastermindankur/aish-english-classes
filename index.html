@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clases de inglés online en grupos de solo 4 personas por 79€ al mes con Aishwarya, profesora nativa y auxiliar de conversación en Laredo. ¡Habla fluido ya!">
+  <meta name="keywords" content="aprender ingles, clases de ingles online, laredo ingles, profesora nativa ingles, ingles para adultos, ingles para niños">
+  <title>Aish English classes.es | Clases de Inglés Online en Grupos Reducidos</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Header / Navbar -->
+  <header class="main-header" id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">Aish English</span><span>classes.es</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#beneficios" class="nav-link">¿Por qué 4?</a>
+        <a href="#testimonios" class="nav-link">Opiniones</a>
+        <a href="#sobre-mi" class="nav-link">Profesora</a>
+        <a href="#contacto" class="btn btn-secondary nav-cta">Reservar Plaza</a>
+      </nav>
+      <!-- Mobile hamburger -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Menú móvil">
+      <a href="#beneficios" class="mobile-nav-link">¿Por qué 4?</a>
+      <a href="#testimonios" class="mobile-nav-link">Opiniones</a>
+      <a href="#sobre-mi" class="mobile-nav-link">Profesora</a>
+      <a href="#lead-form" class="mobile-nav-link mobile-nav-cta">Reservar mi Plaza →</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-glow hero-glow-3"></div>
+      <div class="container hero-container">
+        <div class="hero-content-left">
+          <div class="badge-container">
+            <span class="badge badge-primary">✨ Pierde la vergüenza al hablar</span>
+            <span class="badge badge-accent">👥 Solo 4 personas por grupo</span>
+            <span class="badge badge-date">📅 Inicio: 1 de Junio</span>
+          </div>
+          <h1 class="hero-title">
+            Supera el bloqueo y <span class="gradient-text">habla inglés</span> con total confianza.
+          </h1>
+          <p class="hero-subtitle">
+            ¿Te quedas en blanco en el trabajo o viajas con miedo? Aprende de forma práctica en grupos súper reducidos de <strong>solo 4 alumnos</strong>. Clases divertidas y personalizadas para profesionales y estudiantes en España.
+          </p>
+          
+          <ul class="hero-benefits">
+            <li>
+              <span class="benefit-bullet">🔒</span>
+              <span><strong>Adiós al ridículo:</strong> Un espacio seguro, sin juicios, diseñado para soltarte.</span>
+            </li>
+            <li>
+              <span class="benefit-bullet">📈</span>
+              <span><strong>Impulso profesional:</strong> Prepárate para reuniones, entrevistas y viajes.</span>
+            </li>
+            <li>
+              <span class="benefit-bullet">💬</span>
+              <span><strong>Hablas de verdad:</strong> Al ser solo 4, participas activamente en cada sesión.</span>
+            </li>
+          </ul>
+
+          <!-- Countdown Timer -->
+          <div class="countdown-wrapper">
+            <p class="countdown-label">🚀 Las clases empiezan en:</p>
+            <div class="countdown-timer" id="countdown-timer">
+              <div class="countdown-unit">
+                <span class="countdown-num" id="cd-days">00</span>
+                <span class="countdown-text">días</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-num" id="cd-hours">00</span>
+                <span class="countdown-text">horas</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-num" id="cd-minutes">00</span>
+                <span class="countdown-text">min</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-num" id="cd-seconds">00</span>
+                <span class="countdown-text">seg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary btn-lg btn-shine">Quiero mi plaza</a>
+            <a href="#beneficios" class="btn btn-outline btn-lg">Ver metodología</a>
+          </div>
+        </div>
+        
+        <div class="hero-visual-right">
+          <div class="hero-image-card">
+            <img src="aishwarya.png" alt="Aishwarya, profesora nativa de inglés en España" class="hero-image">
+            <div class="floating-badge badge-teacher">
+              <span class="floating-badge-icon">👩‍🏫</span>
+              <div>
+                <strong>Aishwarya</strong>
+                <p>Nativa &amp; Auxiliar en Laredo</p>
+              </div>
+            </div>
+            <div class="floating-badge badge-price">
+              <span class="floating-badge-icon">💶</span>
+              <div>
+                <strong>79€ / mes</strong>
+                <p>Todo incluido. Sin permanencia</p>
+              </div>
+            </div>
+            <div class="floating-badge badge-group">
+              <span class="floating-badge-icon">👥</span>
+              <div>
+                <strong>Grupos de 4</strong>
+                <p>Atención personalizada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-section" aria-label="Estadísticas">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Años de experiencia</p>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-num" data-target="80">0</span><span class="stat-suffix">%</span>
+            </div>
+            <p class="stat-label">Tiempo hablando en clase</p>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-num" data-target="4">0</span>
+            </div>
+            <p class="stat-label">Alumnos máx. por grupo</p>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value">
+              <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+            </div>
+            <p class="stat-label">Clases online y en directo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Batches of 4 Section -->
+    <section id="beneficios" class="features-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Metodología Única</span>
+          <h2>¿Por qué limitamos las clases a <span class="highlight">04 alumnos</span>?</h2>
+          <p class="section-subtitle">
+            Olvídate de las clases masivas donde solo escuchas de forma pasiva. El aprendizaje real requiere participación activa.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Hablas el 80% del tiempo</h3>
+            <p>En un grupo tradicional de 15 alumnos, apenas hablas 3 minutos por clase. Con 4 alumnos, estarás conversando, debatiendo y practicando de forma constante.</p>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="feature-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Corrección en tiempo real</h3>
+            <p>Prestaré atención a cada detalle de tu pronunciación y gramática. Resolveremos tus dudas en el acto y adaptaremos el ritmo a tus necesidades.</p>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="feature-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3>Tarifa plana flexible</h3>
+            <p>Por solo 79€ al mes tendrás acceso a tus clases semanales en directo y material complementario. Sin contratos de permanencia ni costes sorpresa.</p>
+            <div class="card-shimmer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Details / Focus Section -->
+    <section id="clases-online" class="details-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clases 100% Online</span>
+          <h2>¿Qué hacemos en nuestras clases online?</h2>
+          <p class="section-subtitle">
+            Un método dinámico y participativo para que ganes seguridad y fluidez natural.
+          </p>
+        </div>
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-number">01</div>
+            <h3>Spoken English</h3>
+            <p>Foco absoluto en vocabulario cotidiano, pronunciación correcta y expresiones naturales para comunicarte sin rodeos.</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-number">02</div>
+            <h3>Debates en Grupo</h3>
+            <p>Discusiones grupales guiadas sobre temas de actualidad e interés común para ejercitar tu agilidad mental y vocabulario en directo.</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-number">03</div>
+            <h3>Conversación Práctica</h3>
+            <p>Simulaciones de situaciones cotidianas (viajes, trabajo, llamadas) diseñadas para romper el miedo y ganar confianza al hablar.</p>
+          </div>
+          <div class="detail-card">
+            <div class="detail-number">04</div>
+            <h3>Tareas (Assignments)</h3>
+            <p>Ejercicios semanales recomendados para practicar fuera de clase y consolidar tu avance de manera constante.</p>
+          </div>
+        </div>
+        
+        <div class="start-banner">
+          <span class="calendar-icon">📅</span>
+          <div>
+            <h3>Próximos grupos online empiezan el <strong>1 de Junio de 2026</strong></h3>
+            <p>Las clases son en grupos súper reducidos de máximo 4 personas. ¡Reserva tu plaza antes de que se completen!</p>
+          </div>
+          <a href="#contacto" class="btn btn-secondary">Quiero apuntarme</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Lo que dicen los alumnos</span>
+          <h2>Personas reales, <span class="gradient-text">resultados reales</span></h2>
+          <p class="section-subtitle">Más de 5 años ayudando a estudiantes y profesionales a ganar confianza al hablar inglés.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Llevaba años con miedo a hablar inglés en reuniones de trabajo. Con Aishwarya, en 2 meses ya dirigía presentaciones en inglés. El grupo reducido hace toda la diferencia."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">MC</div>
+              <div>
+                <strong>María C.</strong>
+                <p>Directora de Marketing, Madrid</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-featured">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Aishwarya es increíble. Su método es muy práctico y nunca me sentí juzgado por mis errores. El ambiente de 4 personas es perfecto para perder la vergüenza rápido."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">JR</div>
+              <div>
+                <strong>Javi R.</strong>
+                <p>Ingeniero, Bilbao</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Mi hija de 14 años pasó de odiar el inglés a disfrutarlo. Aishwarya tiene un don especial para conectar con los estudiantes jóvenes. Totalmente recomendado."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">LS</div>
+              <div>
+                <strong>Laura S.</strong>
+                <p>Madre de alumna, Santander</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="sobre-mi" class="about-section scroll-reveal">
+      <div class="container about-container">
+        <div class="about-image-wrapper">
+          <div class="about-image-card">
+            <img src="aishwarya.png" alt="Aishwarya, profesora nativa de inglés" class="about-image">
+            <div class="about-badge">
+              <span class="about-badge-icon">📍</span>
+              <span>Laredo, Cantabria</span>
+            </div>
+          </div>
+
+          <div class="contact-links" style="margin-top: 0; width: 100%; max-width: 360px;">
+            <a href="mailto:garg_aishwarya@yahoo.com" class="contact-link" id="about-email">
+              <span class="contact-link-icon">✉️</span>
+              <span>garg_aishwarya@yahoo.com</span>
+            </a>
+            <a href="https://wa.me/34673275711" target="_blank" rel="noopener noreferrer" class="contact-link" id="about-whatsapp">
+              <span class="contact-link-icon">💬</span>
+              <span>+34 673 275 711 <em>(WhatsApp)</em></span>
+            </a>
+            <a href="https://www.linkedin.com/in/aishwarya-gupta-k-3612b3221/details/experience/" target="_blank" rel="noopener noreferrer" class="contact-link" id="about-linkedin">
+              <span class="contact-link-icon">🔗</span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">Conoce a tu profesora</span>
+          <h2>Hi! I am <span class="gradient-text">Aishwarya</span> 👋</h2>
+          <p class="about-bio-lead">
+            Soy profesora nativa de inglés y actualmente trabajo como <strong>Auxiliar de Conversación (Language Assistant)</strong> en un centro educativo en Laredo, España.
+          </p>
+          <div class="about-bio-details">
+            <p>
+              Tengo más de <strong>5 años de experiencia</strong> ayudando a personas de todas las edades a dominar el inglés. He impartido clases a adultos, niños pequeños, y estudiantes de primaria y secundaria. 
+            </p>
+            <p>
+              Sé exactamente qué dificultades tienen los estudiantes españoles al hablar inglés y me especializo en hacer que el aprendizaje sea <strong>sencillo, sin complicaciones y basado en situaciones reales</strong>.
+            </p>
+          </div>
+          <ul class="about-points">
+            <li>
+              <span class="point-icon">✓</span>
+              <span>Hablante nativa (inglés natural y pronunciación clara)</span>
+            </li>
+            <li>
+              <span class="point-icon">✓</span>
+              <span>Experiencia certificada en colegios e institutos públicos</span>
+            </li>
+            <li>
+              <span class="point-icon">✓</span>
+              <span>Especialista en superar la barrera de la timidez al hablar</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Lead Form Section -->
+    <section id="contacto" class="contact-section scroll-reveal">
+      <div class="container contact-container">
+        <div class="contact-text">
+          <span class="section-tag">Plazas Limitadas</span>
+          <h2>¿Listo para hablar inglés fluido?</h2>
+          <p>
+            Los grupos se completan rápido por orden de llegada. Rellena el formulario con tus datos y te contactaré por WhatsApp o email para asignarte un grupo adecuado a tu nivel y edad.
+          </p>
+          
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Grupo Reducido</h3>
+              <p class="pricing-desc">Máximo 4 alumnos por clase</p>
+            </div>
+            <div class="pricing-price">
+              <span class="currency">€</span>
+              <span class="amount">79</span>
+              <span class="period">/ mes</span>
+            </div>
+            <ul class="pricing-features">
+              <li>🔋 Clases online 100% prácticas</li>
+              <li>💬 Foco principal en conversación y fluidez</li>
+              <li>📝 Materiales incluidos y correcciones personalizadas</li>
+              <li>🚫 Sin cuota de inscripción ni permanencia</li>
+            </ul>
+          </div>
+
+          <!-- Urgency / Social Proof -->
+          <div class="urgency-bar">
+            <span class="urgency-dot"></span>
+            <p><strong>3 plazas</strong> disponibles para el grupo de Junio</p>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form id="lead-form" novalidate>
+            <!-- Honeypot field for spam prevention -->
+            <div class="visually-hidden">
+              <label for="website_url">No rellenar este campo</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="name">Tu Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ej. María García">
+              <span class="error-msg" id="name-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="Ej. maria@correo.com">
+              <span class="error-msg" id="email-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Número de WhatsApp</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="Ej. 600 000 000">
+              <span class="error-msg" id="phone-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Custom radio groups styling -->
+            <fieldset class="form-group fieldset-group">
+              <legend>¿Cuál es tu nivel de inglés actual?</legend>
+              <div class="radio-grid">
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Principiante (A1-A2)" checked>
+                  <span>Principiante (A1-A2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Intermedio (B1-B2)">
+                  <span>Intermedio (B1-B2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Avanzado (C1-C2)">
+                  <span>Avanzado (C1-C2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-block btn-shine" id="submit-btn" style="margin-top: 1rem;">
+              <span class="btn-text">Reservar mi plaza por WhatsApp</span>
+              <span class="spinner hidden"></span>
+            </button>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem;">
+              🔒 Te contactaré por WhatsApp en menos de 24 horas. Tus datos están 100% seguros.
+            </p>
+          </form>
+
+          <!-- Success Alert Container -->
+          <div id="form-success" class="success-container hidden">
+            <div class="success-icon">🎉</div>
+            <h3>¡Plaza Reservada!</h3>
+            <p>Gracias por tu interés. He guardado tu solicitud correctamente. Te contactaré en menos de 24 horas por WhatsApp para asignarte un grupo adecuado a tu nivel.</p>
+            <button class="btn btn-outline" id="reset-form-btn">Enviar otra solicitud</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-accent">Aish English</span><span>classes.es</span>
+        </a>
+        <p id="secret-admin-trigger" style="cursor: default;">© 2026 Aish English classes.es. Todos los derechos reservados.</p>
+        <p class="footer-subtext">Diseñado para ayudar a los estudiantes en España a hablar inglés fluido.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin Modal Panel for Viewing Leads (localStorage Dashboard) -->
+  <dialog id="admin-dialog" class="admin-modal">
+    <div class="admin-modal-content">
+      <div class="admin-modal-header">
+        <h2>Leads Recibidos (Dashboard)</h2>
+        <button id="close-admin" class="btn-close-modal" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="admin-modal-body">
+        <div class="admin-actions">
+          <div class="admin-info-badge">
+            Total registrados: <strong id="total-leads-count">0</strong>
+          </div>
+          <div class="admin-button-group">
+            <button id="export-leads" class="btn btn-secondary btn-sm">📥 Descargar CSV</button>
+            <button id="clear-leads" class="btn btn-outline btn-sm danger-text">⚠️ Borrar todos</button>
+          </div>
+        </div>
+        
+        <div class="table-container">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Nivel</th>
+                <th>Tipo</th>
+                <th>Mensaje</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="leads-tbody">
+              <tr>
+                <td colspan="8" class="text-center empty-state">No hay leads registrados aún.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating Call To Action -->
+  <a href="#lead-form" class="floating-cta" aria-label="Reserva tu plaza">
+    <span class="floating-cta-icon">🚀</span>
+    <span class="floating-cta-text">Reservar mi plaza</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
