@@ -30,17 +30,17 @@
   <!-- Floating Header / Navbar -->
   <header class="main-header" id="main-header">
     <div class="container nav-container">
-      <a href="#it-consulting" class="logo" id="header-brand-logo">
+      <a href="#english" class="logo" id="header-brand-logo">
         <span class="logo-accent">englishwithaish</span><span>.online</span>
       </a>
 
       <!-- Quick Switcher in Header for Desktop -->
       <nav class="desktop-nav" aria-label="Navegación principal">
         <div class="nav-services-quick" role="navigation" aria-label="Cambio rápido de servicios">
-          <button type="button" class="nav-service-pill active" data-tab-target="it-consulting">📦 Amazon &amp; IT</button>
+          <button type="button" class="nav-service-pill active" data-tab-target="english">🎓 Inglés</button>
+          <button type="button" class="nav-service-pill" data-tab-target="it-consulting">📦 Amazon &amp; IT</button>
           <button type="button" class="nav-service-pill" data-tab-target="online-consulting">🌐 1 a 1</button>
           <button type="button" class="nav-service-pill" data-tab-target="freelance">⚡ SP-API</button>
-          <button type="button" class="nav-service-pill" data-tab-target="english">🎓 Inglés</button>
         </div>
         <a href="#contacto" class="btn btn-secondary nav-cta" id="header-cta-btn">Contactar</a>
       </nav>
@@ -56,11 +56,11 @@
   <div class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
     <nav class="mobile-nav-links" aria-label="Menú móvil">
       <div class="mobile-nav-services">
-        <p class="mobile-section-title">Servicios de Consultoría</p>
-        <button type="button" class="mobile-tab-btn active" data-tab-target="it-consulting">📦 Consultoría IT &amp; eCommerce (EU, ES, MX, US)</button>
+        <p class="mobile-section-title">Servicios Disponibles</p>
+        <button type="button" class="mobile-tab-btn active" data-tab-target="english">🎓 Clases de Inglés (Grupos de 4)</button>
+        <button type="button" class="mobile-tab-btn" data-tab-target="it-consulting">📦 Consultoría IT &amp; eCommerce (EU, ES, MX, US)</button>
         <button type="button" class="mobile-tab-btn" data-tab-target="online-consulting">🌐 Consultoría Online 1 a 1 (Seller Central)</button>
         <button type="button" class="mobile-tab-btn" data-tab-target="freelance">⚡ Integración SP-API &amp; Sincronización ERP</button>
-        <button type="button" class="mobile-tab-btn" data-tab-target="english">🎓 Clases de Inglés Profesional (Grupos de 4)</button>
       </div>
       <a href="#contacto" class="mobile-nav-link mobile-nav-cta">Solicitar Información →</a>
     </nav>
@@ -71,10 +71,17 @@
     <section class="services-tab-bar" aria-label="Selector de Servicios">
       <div class="container">
         <div class="tabs-control-header">
-          <span class="section-tag">Áreas de Consultoría &amp; Especialización</span>
+          <span class="section-tag">Áreas de Especialización</span>
         </div>
         <div class="tabs-nav-container" role="tablist" aria-label="Servicios profesionales disponibles">
-          <button type="button" role="tab" id="tab-it-consulting" aria-controls="panel-it-consulting" aria-selected="true" tabindex="0" class="tab-trigger active" data-tab="it-consulting">
+          <button type="button" role="tab" id="tab-english" aria-controls="panel-english" aria-selected="true" tabindex="0" class="tab-trigger active" data-tab="english">
+            <span class="tab-icon" aria-hidden="true">🎓</span>
+            <span class="tab-meta">
+              <span class="tab-title">Clases de Inglés</span>
+              <span class="tab-sub">Grupos de 4 • Online</span>
+            </span>
+          </button>
+          <button type="button" role="tab" id="tab-it-consulting" aria-controls="panel-it-consulting" aria-selected="false" tabindex="-1" class="tab-trigger" data-tab="it-consulting">
             <span class="tab-icon" aria-hidden="true">📦</span>
             <span class="tab-meta">
               <span class="tab-title">Amazon &amp; IT</span>
@@ -95,13 +102,6 @@
               <span class="tab-sub">Catálogo Masivo • ERP Sync</span>
             </span>
           </button>
-          <button type="button" role="tab" id="tab-english" aria-controls="panel-english" aria-selected="false" tabindex="-1" class="tab-trigger" data-tab="english">
-            <span class="tab-icon" aria-hidden="true">🎓</span>
-            <span class="tab-meta">
-              <span class="tab-title">Clases de Inglés</span>
-              <span class="tab-sub">Profesionales • Grupos de 4</span>
-            </span>
-          </button>
         </div>
       </div>
     </section>
@@ -109,7 +109,7 @@
     <!-- =====================================================================
          TAB PANEL 1: CLASES DE INGLÉS (ENGLISH CLASSES)
          ===================================================================== -->
-    <div role="tabpanel" id="panel-english" aria-labelledby="tab-english" class="tab-panel hidden" hidden tabindex="0">
+    <div role="tabpanel" id="panel-english" aria-labelledby="tab-english" class="tab-panel active" tabindex="0">
       
       <!-- English Hero Section -->
       <section class="hero-section">
@@ -444,7 +444,7 @@
     <!-- =====================================================================
          TAB PANEL: CONSULTORÍA IT & ECOMMERCE AMAZON (EU, ES, MX, US)
          ===================================================================== -->
-    <div role="tabpanel" id="panel-it-consulting" aria-labelledby="tab-it-consulting" class="tab-panel active" tabindex="0">
+    <div role="tabpanel" id="panel-it-consulting" aria-labelledby="tab-it-consulting" class="tab-panel hidden" hidden tabindex="0">
       
       <!-- Amazon & IT Consulting Hero -->
       <section class="hero-section">
@@ -1184,26 +1184,26 @@
           
           <div class="pricing-card" id="contact-summary-card">
             <div class="pricing-header">
-              <h3 id="card-service-title">Consultoría IT &amp; eCommerce Amazon</h3>
-              <p class="pricing-desc" id="card-service-desc">Operativa integral y arquitectura técnica en España, UE, México y EE.UU.</p>
+              <h3 id="card-service-title">Clases de Inglés en Grupo</h3>
+              <p class="pricing-desc" id="card-service-desc">Máximo 4 alumnos por clase</p>
             </div>
             <div class="pricing-price" id="card-pricing-wrap">
               <span class="currency">€</span>
-              <span class="amount" id="card-price-amount">490</span>
-              <span class="period" id="card-price-period">/ auditoría</span>
+              <span class="amount" id="card-price-amount">79</span>
+              <span class="period" id="card-price-period">/ mes</span>
             </div>
             <ul class="pricing-features" id="card-features-list">
-              <li>📦 Arquitectura de catálogo y resolución de errores 5665 / 8572</li>
-              <li>🚚 Logística FBA transfronteriza (Send to Amazon)</li>
-              <li>🛡️ Brand Registry, Contenido A+ y Store de marca</li>
-              <li>🔌 Integración técnica SP-API, ERPs y automatizaciones IT</li>
+              <li>🔋 Clases online 100% prácticas</li>
+              <li>💬 Foco principal en conversación y fluidez</li>
+              <li>📝 Materiales incluidos y correcciones personalizadas</li>
+              <li>🚫 Sin cuota de inscripción ni permanencia</li>
             </ul>
           </div>
 
           <!-- Urgency / Social Proof -->
           <div class="urgency-bar" id="contact-urgency-bar">
             <span class="urgency-dot"></span>
-            <p id="contact-urgency-text"><strong>Disponibilidad limitada:</strong> Máximo 3 marcas o auditorías simultáneas</p>
+            <p id="contact-urgency-text"><strong>3 plazas</strong> disponibles para el grupo del próximo viernes</p>
           </div>
 
           <!-- Direct Email Box -->
@@ -1230,10 +1230,10 @@
             <div class="form-group">
               <label for="service-select">¿En qué servicio estás interesado?</label>
               <select id="service-select" name="service" class="form-select">
-                <option value="Consultoría Amazon &amp; IT" selected>📦 Consultoría eCommerce, Amazon Marketplaces &amp; IT (EU/ES/MX/US)</option>
-                <option value="Consultoría Online 1 a 1">🌐 Consultoría Online 1 a 1 (Seller Central en Directo por Videollamada)</option>
-                <option value="Gestión Freelance Amazon">⚡ Integración IT, SP-API &amp; Feeds de Catálogo</option>
-                <option value="Clases de Inglés (Grupos de 4)">🎓 Clases de Inglés Profesional (Grupos de 4 • 79€/mes)</option>
+                <option value="Clases de Inglés (Grupos de 4)" selected>🎓 Clases de Inglés en Grupo (4 alumnos • 79€/mes)</option>
+                <option value="Consultoría Amazon &amp; IT">📦 Consultoría eCommerce &amp; IT (Amazon EU/ES/MX/US)</option>
+                <option value="Consultoría Online 1 a 1">🌐 Consultoría Online 1 a 1 (Seller Central en Directo)</option>
+                <option value="Gestión Freelance Amazon">⚡ Integración SP-API &amp; Catálogo Masivo</option>
               </select>
             </div>
 
@@ -1425,7 +1425,7 @@
 
   <!-- Floating Call To Action -->
   <a href="#contacto" class="floating-cta" id="floating-cta" aria-label="Reserva tu plaza o consulta">
-    <span class="floating-cta-icon" id="floating-cta-icon" aria-hidden="true">🚀</span>
+    <span class="floating-cta-icon" id="floating-cta-icon" aria-hidden="true">🎓</span>
     <span class="floating-cta-text" id="floating-cta-text">Reservar mi plaza</span>
   </a>
 

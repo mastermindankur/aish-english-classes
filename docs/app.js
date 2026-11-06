@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   function switchTab(tabId, updateUrl = true) {
-    if (!TAB_SERVICE_MAP[tabId]) tabId = 'it-consulting';
+    if (!TAB_SERVICE_MAP[tabId]) tabId = 'english';
 
     // 1. Update WAI-ARIA states on tab buttons
     tabTriggers.forEach(tab => {
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleUrlHash() {
     const rawHash = window.location.hash.replace('#', '').toLowerCase();
     if (!rawHash) {
-      switchTab('it-consulting', false);
+      switchTab('english', false);
       return;
     }
 
