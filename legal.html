@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información Legal Oficial, Términos y Condiciones, Aviso Legal (LSSI-CE), Política de Privacidad (RGPD), Cancelaciones y Contratos de englishwithaish.online.">
+  <title>Aviso Legal, Privacidad, Términos y Contratos | englishwithaish.online</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-page-header {
+      padding: 7rem 0 3.5rem 0;
+      background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border-glass);
+      text-align: center;
+    }
+    .legal-page-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .legal-page-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+    .legal-container {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 3.5rem;
+      padding: 4rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      align-items: start;
+    }
+    .legal-sidebar {
+      position: sticky;
+      top: 6rem;
+      background: rgba(15, 22, 40, 0.85);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .legal-sidebar-title {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-secondary);
+      font-weight: 700;
+      margin-bottom: 0.875rem;
+    }
+    .legal-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.65rem 0.875rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .legal-nav-link:hover,
+    .legal-nav-link.active {
+      color: #fff;
+      background: rgba(99, 102, 241, 0.18);
+      border-left: 3px solid var(--primary-color);
+    }
+    .legal-content-body {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    }
+    .legal-section-block {
+      margin-bottom: 4.5rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border-glass);
+      scroll-margin-top: 6.5rem;
+    }
+    .legal-section-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .legal-section-block h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .legal-section-block h3 {
+      font-size: 1.25rem;
+      margin: 2rem 0 0.875rem 0;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+    .legal-section-block h4 {
+      font-size: 1.0625rem;
+      margin: 1.25rem 0 0.5rem 0;
+      color: var(--accent-secondary);
+      font-weight: 600;
+    }
+    .legal-section-block p,
+    .legal-section-block li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .legal-section-block ul,
+    .legal-section-block ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .legal-highlight-box {
+      background: rgba(99, 102, 241, 0.09);
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      border-radius: var(--radius-sm);
+      padding: 1.35rem 1.65rem;
+      margin: 1.75rem 0;
+    }
+    .legal-highlight-box strong {
+      color: #fff;
+    }
+    .contract-template-box {
+      background: rgba(10, 15, 28, 0.85);
+      border: 1px dashed rgba(6, 182, 212, 0.4);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      margin: 1.75rem 0;
+    }
+    .contract-template-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-secondary);
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .badge-compliance {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 991px) {
+      .legal-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .legal-sidebar {
+        position: static;
+        margin-bottom: 1.5rem;
+      }
+      .legal-content-body {
+        padding: 2.25rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Header / Navbar -->
+  <header class="main-header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-brand-logo">
+        <span class="logo-accent">englishwithaish</span><span>.online</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación legal">
+        <a href="index.html" class="nav-link">← Volver al Inicio</a>
+        <a href="index.html#contacto" class="btn btn-secondary nav-cta">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-page-header">
+      <div class="container">
+        <span class="section-tag">Marco Normativo &amp; Buenas Prácticas Legales</span>
+        <h1 class="legal-page-title">Información Legal, Privacidad &amp; Contratos</h1>
+        <p class="legal-page-subtitle">
+          Condiciones formales de contratación, aviso legal conforme a la LSSI-CE, política de protección de datos (RGPD / LOPDGDD), régimen de cancelaciones y acuerdos de servicio estándar de <strong>englishwithaish.online</strong>.
+        </p>
+      </div>
+    </section>
+
+    <div class="legal-container">
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="legal-sidebar" aria-label="Navegación de documentos legales">
+        <span class="legal-sidebar-title">Índice de Documentos</span>
+        <a href="#terminos" class="legal-nav-link active">📜 Términos y Condiciones</a>
+        <a href="#disclaimer" class="legal-nav-link">⚖️ Aviso Legal &amp; Disclaimer</a>
+        <a href="#privacidad" class="legal-nav-link">🔒 Política de Privacidad (RGPD)</a>
+        <a href="#reembolso" class="legal-nav-link">🔄 Cancelación y Reembolso</a>
+        <a href="#contratos" class="legal-nav-link">📑 Contratos Estándar y NDA</a>
+        
+        <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-glass);">
+          <span class="legal-sidebar-title">Canal Oficial de Notificaciones</span>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.4rem;">Correo electrónico designado:</p>
+          <a href="mailto:aishwarya.gupta.khera@gmail.com" style="color: var(--primary-color); font-size: 0.8125rem; word-break: break-all; font-weight: 600;">
+            aishwarya.gupta.khera@gmail.com
+          </a>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">Sede: Bilbao, España</p>
+        </div>
+      </aside>
+
+      <!-- Main Legal Content Body -->
+      <article class="legal-content-body">
+
+        <!-- =================================================================
+             1. TÉRMINOS Y CONDICIONES GENERALES DE CONTRATACIÓN
+             ================================================================= -->
+        <section id="terminos" class="legal-section-block">
+          <div class="badge-compliance">✓ Conforme a Ley 34/2002 y Real Decreto Legislativo 1/2007 (TRLGDCU)</div>
+          <h2><span>📜</span> Términos y Condiciones Generales de Contratación</h2>
+          <p><strong>Fecha de entrada en vigor:</strong> 1 de Junio de 2026 | <strong>Última revisión:</strong> Noviembre de 2026</p>
+          
+          <div class="legal-highlight-box">
+            <p>
+              El presente contrato marco regula la relación jurídica y los términos contractuales entre <strong>Aishwarya Gupta Khera</strong> (en adelante, el "Prestador" o "englishwithaish.online"), con actividad profesional y residencia legal en España y correo de contacto <strong>aishwarya.gupta.khera@gmail.com</strong>, y cualquier persona física o jurídica (en adelante, el "Cliente", "Alumno" o "Usuario") que contrate o acceda a cualquiera de los servicios profesionales ofertados a través del sitio web <strong>englishwithaish.online</strong>.
+            </p>
+          </div>
+
+          <h3>1. Capacidad Jurídica y Aceptación Contractual</h3>
+          <p>
+            Al pulsar el botón de envío del formulario de reserva, formalizar el pago o acceder a las sesiones y entregables, el Cliente declara expresamente poseer capacidad jurídica y de obrar suficiente para obligarse contractualmente conforme al derecho español (mayor de 18 años o contar con autorización expresa y fehaciente de padres o tutores legales). La aceptación de estas condiciones tiene la misma eficacia jurídica que una firma manuscrita conforme a los artículos 23 y siguientes de la Ley 34/2002 (LSSI-CE).
+          </p>
+
+          <h3>2. Objeto y Modalidades de Servicios Ofrecidos</h3>
+          <p>El Prestador comercializa a través de la plataforma cuatro líneas de servicios profesionales independientes:</p>
+          
+          <h4>2.1. Clases de Inglés Online en Grupos Reducidos (B2C)</h4>
+          <ul>
+            <li><strong>Formato:</strong> Clases telemáticas en directo mediante videoconferencia segura (Google Meet / Zoom).</li>
+            <li><strong>Límite de plazas:</strong> Estrictamente limitadas a un máximo de <strong>4 alumnos por grupo</strong> para garantizar la participación activa y el speaking constante.</li>
+            <li><strong>Calendario:</strong> Frecuencia semanal regular con asignación de grupo por nivel y edad. La plataforma computa el inicio del próximo grupo en el viernes futuro más cercano.</li>
+            <li><strong>Materiales:</strong> Guías pedagógicas digitales, vocabulario contextualizado y tareas semanales incluidas sin recargo adicional.</li>
+          </ul>
+
+          <h4>2.2. Consultoría Amazon Marketplaces &amp; IT (B2B / B2C)</h4>
+          <ul>
+            <li><strong>Alcance:</strong> Diagnóstico operativo integral en marketplaces de Amazon (España, Unión Europea, México y EE.UU.). Incluye cómo listar productos, creación y saneamiento de catálogo mediante plantillas masivas (flat files), resolución de errores de catálogo (5665, 8572), logística FBA transfronteriza (Send to Amazon), optimización de campañas publicitarias PPC (Sponsored Products, Brands), Brand Registry, Contenido A+ e integración técnica de sistemas IT / ERP a través de la Selling Partner API (SP-API).</li>
+            <li><strong>Entregables:</strong> Informe técnico y comercial ejecutivo, plantillas flat file validadas, plan logístico FBA transfronterizo, código de conectores SP-API y sesiones de transferencia técnica.</li>
+          </ul>
+
+          <h4>2.3. Consultoría Online 1 a 1: Seller Central en Directo</h4>
+          <ul>
+            <li><strong>Alcance:</strong> Sesiones privadas e individuales de 45 a 90 minutos con pantalla compartida en tiempo real sobre la cuenta de Amazon Seller Central del Cliente (España, UE, México o Estados Unidos). Resolución interactiva de bloqueos de listing, validación de atributos obligatorios, apelación de errores de catálogo y preparación de envíos FBA.</li>
+            <li><strong>Entregables:</strong> Grabación completa en alta definición, minuta ejecutiva y checklist de pasos concretos en formato PDF/Notion, con canal de resolución de dudas durante los 7 días posteriores.</li>
+          </ul>
+
+          <h4>2.4. Gestión Freelance de Catálogo Amazon &amp; Integraciones SP-API</h4>
+          <ul>
+            <li><strong>Alcance:</strong> Ejecución técnica delegada de catálogo: subida masiva de listings vía flat file con matrices parent-child, copywriting y optimización SEO bilingüe (español de España/México e inglés de EE.UU.), diseño de Brand Store oficial, maquetación de Contenido A+ y programación de microservicios o automatizaciones con la Amazon Selling Partner API (SP-API) en Node.js o Python.</li>
+            <li><strong>Entregables:</strong> Catálogo de listings publicado y libre de supresiones en Seller Central, recursos gráficos A+, repositorio de código para scripts SP-API y 30 días de garantía de soporte técnico.</li>
+          </ul>
+
+          <h3>3. Precios, Divisa, Impuestos y Facturación</h3>
+          <ul>
+            <li>Todos los precios se publican en <strong>Euros (€)</strong>. Salvo indicación expresa, se entenderán con los impuestos legalmente aplicables devengados en España conforme a la Ley 37/1992 del IVA (incluyendo las posibles exenciones en formación reglada según Art. 20.Uno.9º de la Ley del IVA cuando concurran los requisitos legales).</li>
+            <li><strong>Clases de Inglés:</strong> Tarifa plana mensual de 79€/mes (o tarifa individualizada pactada), pagadera por adelantado antes del día 1 del mes lectivo. <strong>Sin cláusula de permanencia</strong> ni penalización por baja anticipada.</li>
+            <li><strong>Consultorías IT y Online 1 a 1:</strong> Abono del 100% del importe al confirmar la reserva de fecha y hora en agenda.</li>
+            <li><strong>Proyectos Freelance:</strong> 50% en concepto de provisión de fondos y reserva de sprint antes del inicio de los trabajos, y el 50% restante a la entrega, validación funcional o pase a producción.</li>
+            <li>A petición del Cliente se emitirá factura formal con desglose tributario, remitida en formato electrónico en formato PDF.</li>
+          </ul>
+
+          <h3>4. Medios de Pago y Seguridad Transaccional</h3>
+          <p>
+            Los pagos se efectúan a través de plataformas seguras con cifrado SSL de 256 bits y cumplimiento estricto de la directiva europea de servicios de pago PSD2 y autenticación reforzada del cliente (SCA): tarjeta bancaria mediante <strong>Stripe</strong>, transferencia bancaria SEPA, <strong>Bizum</strong> o <strong>PayPal</strong>. El Prestador no almacena números de tarjeta ni datos bancarios sensibles en sus servidores locales.
+          </p>
+
+          <h3>5. Régimen de Propiedad Intelectual e Industrial</h3>
+          <ul>
+            <li><strong>Material Pedagógico y del Sitio Web:</strong> Las marcas, logotipos, imágenes, audios, metodologías y ejercicios formativos son titularidad exclusiva de Aishwarya Gupta Khera. El Alumno adquiere una licencia personal, no exclusiva, intransferible y no sublicenciable para su estudio personal, quedando prohibida su reproducción masiva, cesión o comercialización.</li>
+            <li><strong>Software a Medida en Proyectos Freelance:</strong> A la recepción efectiva y completa del 100% del precio total pactado para el proyecto, el Prestador cede al Cliente, con carácter exclusivo y para el ámbito territorial mundial durante el plazo máximo legal, la totalidad de los derechos de explotación patrimonial (reproducción, distribución, comunicación pública y transformación) sobre el código fuente personalizado desarrollado. El Prestador se reserva el derecho de autor moral y el derecho a referenciar el proyecto como caso de éxito en su portfolio profesional, salvo suscripción de acuerdo de confidencialidad (NDA) expreso en sentido contrario.</li>
+          </ul>
+
+          <h3>6. Código de Conducta y Obligaciones de las Partes</h3>
+          <ul>
+            <li><strong>Del Cliente / Alumno:</strong> Conectarse puntualmente a las sesiones con hardware adecuado (micrófono y cámara activos), mantener un trato respetuoso hacia la docente y compañeros, y abstenerse expresamente de grabar en audio o vídeo las sesiones grupales sin consentimiento unánime por respeto al derecho a la propia imagen y privacidad de terceros.</li>
+            <li><strong>Del Prestador:</strong> Impartir las clases con la diligencia profesional debida, cumplir con los estándares técnicos y pedagógicos ofertados, y guardar estricto secreto profesional sobre la información técnica y de negocio del cliente.</li>
+          </ul>
+
+          <h3>7. Validez de Ofertas, Modificaciones y Fuero Legal</h3>
+          <p>
+            Las cotizaciones y presupuestos a medida mantendrán su vigencia durante un plazo de 30 días naturales desde su emisión. Este contrato se rige íntegramente por la legislación española. Para la resolución de controversias derivadas de contratos B2B entre profesionales, ambas partes se someten a los Juzgados y Tribunales competentes de Bilbao (España), con renuncia a cualquier otro fuero. En caso de consumidores finales (B2C), resultarán de aplicación los tribunales correspondientes al domicilio del consumidor conforme al TRLGDCU. En cumplimiento del Reglamento (UE) 524/2013, se informa de la existencia de la plataforma europea de resolución de litigios en línea accesible en <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--accent-secondary);">https://ec.europa.eu/consumers/odr</a>.
+          </p>
+        </section>
+
+
+        <!-- =================================================================
+             2. AVISO LEGAL Y EXENCIÓN DE RESPONSABILIDAD (DISCLAIMER)
+             ================================================================= -->
+        <section id="disclaimer" class="legal-section-block">
+          <div class="badge-compliance">✓ Información Obligatoria Art. 10 Ley 34/2002 (LSSI-CE)</div>
+          <h2><span>⚖️</span> Aviso Legal y Exención de Responsabilidad</h2>
+          
+          <div class="legal-highlight-box">
+            <p><strong>Identificación del Prestador de Servicios de la Sociedad de la Información:</strong><br>
+            • <strong>Titular:</strong> Aishwarya Gupta Khera<br>
+            • <strong>Actividad:</strong> Enseñanza Lingüística no reglada, Consultoría de Tecnologías de la Información y Desarrollo de Software Freelance.<br>
+            • <strong>Domicilio de Actividad:</strong> Bilbao, España.<br>
+            • <strong>Correo Electrónico de Contacto:</strong> <a href="mailto:aishwarya.gupta.khera@gmail.com" style="color:var(--primary-color); font-weight:700;">aishwarya.gupta.khera@gmail.com</a><br>
+            • <strong>Teléfono de Atención / WhatsApp:</strong> +34 673 275 711<br>
+            • <strong>Nombre de Dominio:</strong> englishwithaish.online
+            </p>
+          </div>
+
+          <h3>1. Condiciones de Acceso y Uso del Sitio Web</h3>
+          <p>
+            El acceso y navegación por el sitio web <strong>englishwithaish.online</strong> atribuye la condición de Usuario e implica la aceptación plena de todas las advertencias legales aquí contenidas. El Usuario se compromete a hacer un uso lícito del portal, absteniéndose de realizar ataques de denegación de servicio (DoS/DDoS), inyecciones de código malicioso, scraping no consentido de datos o cualquier actividad lesiva para la infraestructura técnica de la plataforma o terceros.
+          </p>
+
+          <h3>2. Disclaimer de Resultados Lingüísticos y Educativos</h3>
+          <p>
+            Los programas de aprendizaje y sesiones de inglés están estructurados conforme a estándares pedagógicos modernos y métodos comunicativos probados. No obstante, <strong>el dominio, la adquisición de fluidez y el ritmo de aprendizaje de un idioma dependen de factores subjetivos individuales</strong> que escapan al control de la profesora (tales como la dedicación horaria semanal fuera de clase, la constancia, la participación y el nivel de partida del estudiante). Ninguna afirmación en esta web debe interpretarse como una garantía automática de aprobación de exámenes oficiales de certificación (Cambridge B2/C1, IELTS, TOEFL, Escuela Oficial de Idiomas) sin la debida preparación y esfuerzo personal del alumno.
+          </p>
+
+          <h3>3. Disclaimer de Consultoría IT y Operativa en Amazon Marketplaces</h3>
+          <p>
+            Los servicios de consultoría tecnológica, auditorías de catálogo y recomendaciones operativas en Amazon (España, UE, México y EE.UU.) se formulan con la diligencia de un experto independiente con base en las directrices oficiales de Seller Central y la información suministrada por el Cliente. <strong>El Prestador no mantiene vinculación societaria ni actúa como representante oficial de Amazon Services LLC</strong>. La aprobación final de marcas, asignación de Buy Box, reactivación de ASINs bloqueados, variaciones de comisiones FBA o decisiones de cumplimiento aduanero/fiscal son potestad exclusiva y unilateral de Amazon y las autoridades competentes. El Prestador no asume responsabilidad alguna por pérdidas indirectas, lucro cesante o suspensiones de cuenta motivadas por el desempeño operativo del Cliente.
+          </p>
+
+          <h3>4. Disclaimer de Software Freelance, Integraciones SP-API &amp; Terceros</h3>
+          <p>
+            El software, conectores SP-API y aplicaciones entregadas se suministran verificados de acuerdo con el pliego funcional acordado, con una <strong>garantía de corrección de bugs de 30 días naturales</strong> tras la entrega. Quedan expresamente excluidos de dicha garantía y de toda responsabilidad imputable al desarrollador:
+          </p>
+          <ul>
+            <li>Interrupciones de servicio, caídas de red o modificaciones no comunicadas imputables a proveedores cloud de terceros (ej. Amazon Web Services, Google Cloud Platform, Microsoft Azure, Vercel, Supabase, Cloudflare, etc.).</li>
+            <li>Cambios de políticas, interrupciones o rotura de retrocompatibilidad en la Selling Partner API (SP-API) de Amazon o APIs de terceros (ej. Stripe, OpenAI, Gemini API, Meta).</li>
+            <li>Modificaciones o alteraciones del código fuente efectuadas por el Cliente o terceras personas no autorizadas por escrito.</li>
+          </ul>
+
+          <h3>5. Enlaces de Terceros (Hyperlinks)</h3>
+          <p>
+            Este sitio web puede incorporar enlaces hacia plataformas externas (LinkedIn, WhatsApp, proveedores de pago o recursos didácticos). El Prestador no ejerce control alguno sobre los contenidos de dichos sitios y declina toda responsabilidad por los daños que pudieran derivarse de la navegación por los mismos.
+          </p>
+        </section>
+
+
+        <!-- =================================================================
+             3. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS (RGPD)
+             ================================================================= -->
+        <section id="privacidad" class="legal-section-block">
+          <div class="badge-compliance">✓ Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD)</div>
+          <h2><span>🔒</span> Política de Privacidad y Protección de Datos Personales</h2>
+          <p><strong>Última actualización:</strong> Noviembre de 2026</p>
+
+          <div class="legal-highlight-box">
+            <p>
+              El respeto a tu privacidad y el cumplimiento estricto del <strong>Reglamento General de Protección de Datos (RGPD UE 2016/679)</strong> y de la <strong>Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)</strong> son principios irrenunciables en <strong>englishwithaish.online</strong>.
+            </p>
+          </div>
+
+          <h3>1. Identidad y Datos de Contacto del Responsable del Tratamiento</h3>
+          <ul>
+            <li><strong>Responsable:</strong> Aishwarya Gupta Khera</li>
+            <li><strong>Actividad Profesional:</strong> Formación en Lengua Inglesa, Consultoría IT &amp; Desarrollo de Software.</li>
+            <li><strong>Dirección Postal:</strong> Bilbao, España.</li>
+            <li><strong>Correo Electrónico de Privacidad:</strong> <a href="mailto:aishwarya.gupta.khera@gmail.com" style="color:var(--primary-color); font-weight:700;">aishwarya.gupta.khera@gmail.com</a></li>
+          </ul>
+
+          <h3>2. Categorías de Datos Tratados, Finalidades y Base de Legitimación</h3>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.875rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-glass); text-align:left;">
+                <th style="padding:0.75rem; color:#fff;">Finalidad del Tratamiento</th>
+                <th style="padding:0.75rem; color:#fff;">Categoría de Datos</th>
+                <th style="padding:0.75rem; color:#fff;">Base Jurídica (RGPD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:0.75rem;">Atención de solicitudes recibidas vía formulario web o WhatsApp</td>
+                <td style="padding:0.75rem;">Nombre, email, teléfono, nivel de idioma, detalles del proyecto</td>
+                <td style="padding:0.75rem;"><strong>Art. 6.1.a:</strong> Consentimiento del interesado</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:0.75rem;">Gestión de matrícula, impartición de clases online y coordinación de grupos</td>
+                <td style="padding:0.75rem;">Datos identificativos, seguimiento formativo, asistencia, grabaciones autorizadas</td>
+                <td style="padding:0.75rem;"><strong>Art. 6.1.b:</strong> Ejecución del contrato formativo</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:0.75rem;">Ejecución de consultorías IT/online y proyectos de desarrollo freelance</td>
+                <td style="padding:0.75rem;">Datos de contacto corporativo, especificaciones técnicas, repositorios, accesos temporales</td>
+                <td style="padding:0.75rem;"><strong>Art. 6.1.b:</strong> Ejecución de contrato de servicios</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem;">Facturación, contabilidad y cumplimiento fiscal ante la AEAT</td>
+                <td style="padding:0.75rem;">Nombre completo/Razón social, NIF/CIF, dirección de facturación</td>
+                <td style="padding:0.75rem;"><strong>Art. 6.1.c:</strong> Obligación legal tributaria y mercantil</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>3. Tratamiento de Datos de Menores de Edad</h3>
+          <p>
+            En caso de contratación de clases de inglés para menores de 14 años, es requisito indispensable que la inscripción y consentimiento sean formalizados directamente por el padre, madre o tutor legal del menor, conforme al artículo 7 de la LOPDGDD.
+          </p>
+
+          <h3>4. Plazos de Conservación de la Información</h3>
+          <p>
+            Los datos personales se conservarán mientras se mantenga la relación formativa o mercantil vigente. Una vez finalizada, los datos se conservarán debidamente bloqueados a disposición exclusiva de Administraciones Públicas, Juzgados y Tribunales durante los plazos legalmente previstos de prescripción de responsabilidades (con carácter general, <strong>5 años</strong> conforme al Código de Comercio y 4 años según la Ley General Tributaria).
+          </p>
+
+          <h3>5. Destinatarios y Encargados de Tratamiento</h3>
+          <p>
+            No se efectúa cesión de datos a terceras entidades con fines comerciales. Para garantizar la operativa técnica de los servicios, se recurre a prestadores de servicios que actúan como <strong>Encargados del Tratamiento</strong> debidamente formalizados y con garantías adecuadas:
+          </p>
+          <ul>
+            <li><strong>Web3Forms:</strong> Proveedor para la recepción segura de formularios con cifrado de tránsito.</li>
+            <li><strong>Google Workspace / Google Meet (Google Ireland Ltd.):</strong> Infraestructura de correo, calendario y videoconferencia segura con servidores en la Unión Europea y garantías bajo Cláusulas Contractuales Tipo (SCC).</li>
+            <li><strong>Stripe Payments Europe, Ltd.:</strong> Pasarela de pago segura con certificación PCI-DSS Nivel 1.</li>
+          </ul>
+
+          <h3>6. Ejercicio de Derechos del Usuario (ARCO-POL)</h3>
+          <p>El Usuario puede ejercitar en cualquier momento y de forma totalmente gratuita sus derechos reconocidos por el RGPD:</p>
+          <ul>
+            <li><strong>Acceso:</strong> Saber qué datos tuyos estamos tratando.</li>
+            <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos.</li>
+            <li><strong>Supresión ("Derecho al Olvido"):</strong> Solicitar el borrado cuando ya no sean necesarios.</li>
+            <li><strong>Limitación del Tratamiento:</strong> Suspender el tratamiento en supuestos específicos.</li>
+            <li><strong>Portabilidad:</strong> Recibir tus datos en formato electrónico estructurado de uso común.</li>
+            <li><strong>Oposición:</strong> Oponerte al tratamiento por motivos fundados.</li>
+            <li><strong>Revocación del Consentimiento:</strong> Retirar tu consentimiento sin carácter retroactivo.</li>
+          </ul>
+          <p>
+            Para ejercer cualquiera de estos derechos, basta enviar un correo electrónico con la referencia "Protección de Datos" acreditando tu identidad a:
+          </p>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--primary-color);">✉️ aishwarya.gupta.khera@gmail.com</p>
+          <p>
+            Si consideras que tus derechos no han sido atendidos adecuadamente, tienes derecho a interponer una reclamación de tutela ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> a través de su sede electrónica en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" style="color:var(--accent-secondary);">www.aepd.es</a> o por correo postal en C/ Jorge Juan 6, 28001 Madrid.
+          </p>
+        </section>
+
+
+        <!-- =================================================================
+             4. POLÍTICA DE CANCELACIÓN, DESISTIMIENTO Y REEMBOLSO
+             ================================================================= -->
+        <section id="reembolso" class="legal-section-block">
+          <div class="badge-compliance">✓ Artículos 102 a 108 Real Decreto Legislativo 1/2007 (TRLGDCU)</div>
+          <h2><span>🔄</span> Política de Cancelación, Desistimiento y Reembolso</h2>
+
+          <div class="legal-highlight-box">
+            <p>
+              Establecemos un marco de reembolsos y cancelaciones justo, transparente y plenamente respetuoso con los derechos del consumidor, equilibrando la protección del cliente con el compromiso organizativo que exige la reserva de plazas estrictamente limitadas a 4 alumnos y bloqueos de agenda profesional.
+            </p>
+          </div>
+
+          <h3>1. Clases de Inglés Online (Grupos de 4 Alumnos)</h3>
+          
+          <h4>1.1. Ausencia de Permanencia y Baja Voluntaria</h4>
+          <p>
+            El servicio de clases grupales se contrata por períodos mensuales naturales y <strong>no impone compromiso de permanencia</strong> temporal. El alumno puede causar baja en cualquier momento notificándolo por escrito (WhatsApp o email a <code>aishwarya.gupta.khera@gmail.com</code>) antes del <strong>día 1 del mes natural siguiente</strong>. La baja surtirá efectos automáticos para el mes posterior, sin cobro adicional ni penalización.
+          </p>
+
+          <h4>1.2. Derecho Legal de Desistimiento (14 Días)</h4>
+          <p>
+            Conforme a los artículos 102 y siguientes del Real Decreto Legislativo 1/2007, el alumno consumidor tiene derecho a desistir del contrato en el plazo de <strong>14 días naturales</strong> a contar desde el abono de la cuota, sin necesidad de justificación y sin penalización.
+          </p>
+          <ul>
+            <li>Si las clases del período aún no se hubiesen iniciado, se procederá al <strong>reembolso íntegro del 100%</strong> de la cuota abonada.</li>
+            <li>Si el alumno hubiese solicitado expresamente comenzar las clases antes de vencer el plazo de 14 días y hubiese asistido a alguna sesión, se reintegrará la parte proporcional correspondiente a las sesiones no impartidas.</li>
+          </ul>
+
+          <h4>1.3. Faltas de Asistencia Individuales</h4>
+          <p>
+            Debido a que cada grupo se encuentra cerrado y limitado estrictamente a <strong>4 plazas exclusivas</strong>, la plaza queda reservada y bloqueada de forma nominativa. En consecuencia, la falta de asistencia voluntaria del alumno a una sesión programada no dará derecho a devolución económica ni a su recuperación en otro grupo, a fin de no alterar la dinámica del resto de compañeros. La profesora facilitará al alumno ausente las diapositivas, notas de vocabulario y tareas de la sesión.
+          </p>
+
+          <h4>1.4. Cancelación por la Docente o Causa de Fuerza Mayor</h4>
+          <p>
+            En el supuesto excepcional de que la profesora deba suspender una sesión programada por enfermedad o fuerza mayor, se coordinará obligatoriamente una fecha de recuperación consensuada con el grupo o, en su defecto, se descontará o abonará el importe proporcional correspondiente en la siguiente mensualidad.
+          </p>
+
+          <h3>2. Consultoría Amazon &amp; IT y Sesiones Online 1 a 1</h3>
+          <ul>
+            <li><strong>Preaviso Superior a 24 Horas:</strong> El Cliente puede cancelar o solicitar la reprogramación de su sesión con más de 24 horas de antelación respecto a la hora fijada, teniendo derecho al <strong>reembolso del 100%</strong> del importe o a la reasignación de fecha sin sobrecoste.</li>
+            <li><strong>Cancelación con Menos de 24 Horas o Incomparecencia (No-show):</strong> La sesión se dará por consumida y no será reembolsable, en concepto de indemnización por el bloqueo de agenda profesional y el tiempo de análisis preliminar del catálogo en Seller Central.</li>
+          </ul>
+
+          <h3>3. Proyectos Freelance de Catálogo y SP-API</h3>
+          <ul>
+            <li><strong>Anticipo de Provisión de Fondos (50%):</strong> El anticipo inicial formaliza la reserva del proyecto y cubre las tareas de redacción SEO, maquetación de plantillas flat file masivas o configuración de conectores SP-API. Dicho anticipo no es reembolsable una vez transcurridas 48 horas desde su pago o una vez iniciados los trabajos.</li>
+            <li><strong>Aprobación de Hitos:</strong> La validación expresa o tácita (tras 5 días hábiles de la entrega de listings en Seller Central o software en staging sin reporte de incidencias) de cada entrega por parte del Cliente tiene carácter definitivo e irrevocable.</li>
+            <li><strong>Resolución Anticipada por el Cliente:</strong> En caso de que el Cliente decida unilateralmente desistir de un proyecto en curso, se practicará una liquidación proporcional facturándose los listings, horas o módulos efectivamente desarrollados hasta la fecha de notificación.</li>
+          </ul>
+
+          <h3>4. Procedimiento y Plazo para el Abono de Reembolsos</h3>
+          <p>
+            Toda solicitud de reembolso o desistimiento deberá comunicarse formalmente por correo electrónico a <strong>aishwarya.gupta.khera@gmail.com</strong> indicando el nombre completo, el servicio objeto de solicitud y el motivo. Los reembolsos aprobados se ordenarán en un plazo máximo de <strong>5 a 10 días laborables</strong> a través del mismo medio de pago empleado por el Cliente, sin que éste asuma gasto de gestión bancaria alguno.
+          </p>
+        </section>
+
+
+        <!-- =================================================================
+             5. CONTRATOS Y ACUERDOS DE SERVICIO ESTÁNDAR
+             ================================================================= -->
+        <section id="contratos" class="legal-section-block">
+          <div class="badge-compliance">✓ Estándares B2C y B2B según Derecho Español y de la UE</div>
+          <h2><span>📑</span> Contratos y Acuerdos de Servicio Estándar</h2>
+          <p>
+            A continuación se transcriben las condiciones marco y cláusulas tipo aplicables a las órdenes de servicio formalizadas a través de la plataforma.
+          </p>
+
+          <!-- Model 1: English Classes -->
+          <div class="contract-template-box">
+            <div class="contract-template-title"><span>📘</span> Modelo Contractual 1: Acuerdo de Prestación de Servicios de Formación Lingüística Online</div>
+            <p><strong>1. PARTES:</strong> De una parte, Aishwarya Gupta Khera (en adelante, la "Profesora"). De otra parte, el Alumno o su representante legal debidamente identificado en el formulario de inscripción (en adelante, el "Alumno").</p>
+            <p><strong>2. OBJETO:</strong> Impartición de formación telemática de lengua inglesa en directo mediante sesiones periódicas en grupos reducidos de hasta 4 alumnos, enfocada a conversación, fluidez, corrección fonética y gramatical contextualizada.</p>
+            <p><strong>3. PRECIO Y MENSUALIDADES:</strong> El precio es de 79€ mensuales para la modalidad grupal de 4 alumnos, con pago domiciliado o anticipado antes del día 1 del mes en curso.</p>
+            <p><strong>4. CONDUCTA Y PRIVACIDAD EN EL AULA VIRTUAL:</strong> El Alumno se compromete a asistir puntualmente con cámara y audio habilitados. Queda estrictamente prohibida la grabación, difusión o captura de imagen de las sesiones grupales sin el consentimiento unánime por escrito de todos los participantes, bajo apercibimiento de expulsión inmediata y reserva de acciones legales.</p>
+            <p><strong>5. EXTINCIÓN:</strong> Ambas partes pueden rescindir el contrato con preaviso antes de iniciarse el siguiente mes natural, sin permanencia ni indemnización adicional.</p>
+          </div>
+
+          <!-- Model 2: Amazon Consulting & Mutual NDA -->
+          <div class="contract-template-box">
+            <div class="contract-template-title"><span>📦</span> Modelo Contractual 2: Acuerdo Marco de Consultoría Amazon Marketplaces, IT y Confidencialidad Bilateral (NDA)</div>
+            <p><strong>1. ALCANCE TÉCNICO:</strong> Auditoría de catálogo y operativa integral en marketplaces de Amazon (España, UE, México y EE.UU.), cómo listar productos mediante flat files masivos, resolución de errores 5665/8572, optimización FBA/PPC, Brand Registry y arquitectura cloud / SP-API.</p>
+            <p><strong>2. CLÁUSULA DE CONFIDENCIALIDAD ESTRICTA (NDA):</strong> El Consultor se compromete expresamente a tratar como Información Confidencial toda información comercial, permisos de usuario de Seller Central, credenciales de API, código fuente propietario, costes de producto y márgenes facilitados por el Cliente. Dicha información será utilizada con la única y exclusiva finalidad de ejecutar la consultoría y no será divulgada, cedida ni utilizada para alimentar modelos de Inteligencia Artificial públicos sin autorización expresa por escrito.</p>
+            <p><strong>3. VIGENCIA DEL SECRETO PROFESIONAL:</strong> La obligación de confidencialidad subsistirá con carácter indefinido para el secreto industrial y durante un período mínimo de tres (3) años tras la conclusión del servicio de consultoría.</p>
+            <p><strong>4. RESPONSABILIDAD:</strong> La consultoría emite dictámenes y recomendaciones según las directrices vigentes de Amazon. La aprobación definitiva de marcas, reactivación de ASINs y decisiones unilaterales de Seller Central competen a Amazon Services LLC.</p>
+          </div>
+
+          <!-- Model 3: Freelance Amazon Catalog & SP-API Development -->
+          <div class="contract-template-box">
+            <div class="contract-template-title"><span>🚀</span> Modelo Contractual 3: Contrato de Gestión de Catálogo Amazon, Desarrollo SP-API y Cesión de Propiedad Intelectual</div>
+            <p><strong>1. DECLARACIÓN DE TRABAJO (SOW):</strong> El Desarrollador/Consultor ejecutará los trabajos de subida masiva de listings con variaciones parent-child, copywriting y SEO bilingüe (ES/MX/US), diseño de Brand Store / Contenido A+ y programación de microservicios con la Amazon Selling Partner API (SP-API).</p>
+            <p><strong>2. CALENDARIO E HITOS:</strong> Los proyectos se articulan mediante entregas de catálogo o hitos de código. El anticipo del 50% autoriza el inicio de los trabajos. El 50% restante se liquida tras la validación en Seller Central o demostración de software en staging.</p>
+            <p><strong>3. CESIÓN TOTAL DE PROPIEDAD INTELECTUAL:</strong> Condicionada suspensivamente al cobro íntegro del 100% de los honorarios pactados, el Desarrollador/Consultor cede al Cliente con carácter exclusivo y perpetuo todos los derechos patrimoniales sobre los textos persuasivos de listings, recursos gráficos A+ y código fuente de conectores SP-API creados específicamente para el proyecto.</p>
+            <p><strong>4. GARANTÍA TÉCNICA (30 DÍAS):</strong> Se estipula un período de garantía técnica de 30 días naturales desde la entrega final para subsanar sin coste cualquier defecto de formato en listings o errores de código atribuibles a los scripts desarrollados. Transcurrido dicho plazo, las ampliaciones se presupuestarán por bolsa de horas o nuevo acuerdo de servicio.</p>
+            <p><strong>5. GESTIÓN DE CAMBIOS (CHANGE REQUESTS):</strong> Cualquier nuevo marketplace, gama de productos o funcionalidad de software no contemplada en el pliego inicial será presupuestada de forma separada antes de su ejecución.</p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="index.html" class="logo footer-logo">
+          <span class="logo-accent">englishwithaish</span><span>.online</span>
+        </a>
+        <p>© 2026 englishwithaish.online. Todos los derechos reservados.</p>
+        <p class="footer-subtext">Canal de notificaciones legales y DPA: <a href="mailto:aishwarya.gupta.khera@gmail.com" style="color:var(--primary-color); font-weight:600;">aishwarya.gupta.khera@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Highlight sidebar links as user scrolls
+    const sidebarLinks = document.querySelectorAll('.legal-nav-link');
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      const sections = document.querySelectorAll('.legal-section-block');
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 130;
+        if (window.scrollY >= top) {
+          currentSection = sec.getAttribute('id');
+        }
+      });
+      sidebarLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
