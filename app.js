@@ -182,17 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'it-consulting': {
       serviceVal: 'Consultoría Amazon & IT',
-      ctaText: 'Consultoría Amazon',
+      ctaText: 'Consultoría eCommerce & IT',
       ctaIcon: '📦',
-      cardTitle: 'Consultoría Amazon Marketplaces & IT',
-      cardDesc: 'Operativa integral en España, UE, México y EE.UU.',
+      cardTitle: 'Consultoría IT & eCommerce Amazon',
+      cardDesc: 'Operativa integral y arquitectura técnica en España, UE, México y EE.UU.',
       priceAmount: '490',
       pricePeriod: '/ auditoría',
       features: [
-        '📦 Creación de listings y resolución de errores 5665 / 8572',
+        '📦 Arquitectura de catálogo y resolución de errores 5665 / 8572',
         '🚚 Logística FBA transfronteriza (Send to Amazon)',
         '🛡️ Brand Registry, Contenido A+ y Store de marca',
-        '🔌 Integración técnica SP-API, ERPs y automatizaciones'
+        '🔌 Integración técnica SP-API, ERPs y automatizaciones IT'
       ],
       urgency: '<strong>Disponibilidad limitada:</strong> Máximo 3 marcas o auditorías simultáneas'
     },
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   function switchTab(tabId, updateUrl = true) {
-    if (!TAB_SERVICE_MAP[tabId]) tabId = 'english';
+    if (!TAB_SERVICE_MAP[tabId]) tabId = 'it-consulting';
 
     // 1. Update WAI-ARIA states on tab buttons
     tabTriggers.forEach(tab => {
@@ -335,7 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle URL hash on load or on hashchange
   function handleUrlHash() {
     const rawHash = window.location.hash.replace('#', '').toLowerCase();
-    if (!rawHash) return;
+    if (!rawHash) {
+      switchTab('it-consulting', false);
+      return;
+    }
 
     if (rawHash === 'it-consulting' || rawHash === 'consultoria-it' || rawHash === 'servicios-it') {
       switchTab('it-consulting', false);
@@ -951,7 +954,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <h3>2. Modalidades de Servicios</h3>
       <ul>
         <li><strong>Clases de Inglés Online (B2C):</strong> Impartidas por videoconferencia en directo en grupos súper reducidos de <strong>máximo 4 alumnos</strong> para maximizar el speaking. Inicio dinámico en el viernes futuro más cercano. Materiales pedagógicos digitales incluidos sin cuota de matrícula.</li>
-        <li><strong>Consultoría Amazon Marketplaces &amp; IT (B2B):</strong> Auditoría y asesoramiento operativo integral para vendedores en Amazon (España, Unión Europea, México y EE.UU.). Incluye cómo listar productos, creación de catálogo mediante plantillas masivas (flat files), resolución de errores de catálogo (5665, 8572), logística FBA transfronteriza (Send to Amazon), optimización de campañas publicitarias PPC, Brand Registry, Contenido A+ e integración técnica de sistemas IT / ERP a través de la Selling Partner API (SP-API).</li>
+        <li><strong>Consultoría IT &amp; eCommerce para Amazon Marketplaces (B2B):</strong> Auditoría técnica, arquitectura de catálogo y asesoramiento operativo integral para vendedores y marcas en Amazon (España, Unión Europea, México y EE.UU.). Incluye cómo listar productos, creación y saneamiento de catálogo mediante plantillas masivas (flat files), resolución de errores técnicos (5665, 8572, 5461), logística FBA transfronteriza (Send to Amazon), optimización de estrategias de visibilidad y posicionamiento orgánico, Brand Registry, Contenido A+ e integración técnica de sistemas IT / ERP a través de la Selling Partner API (SP-API).</li>
         <li><strong>Consultoría Online 1 a 1 (Seller Central en Directo):</strong> Sesiones privadas por videollamada compartiendo pantalla directamente sobre la cuenta de Amazon Seller Central del Cliente para resolución en vivo de incidencias de listing, validación de atributos obligatorios y preparación de envíos FBA.</li>
         <li><strong>Gestión Freelance de Catálogo &amp; SP-API:</strong> Ejecución técnica delegada: creación de matrices de variación parent-child, copywriting y SEO de listings bilingüe (español de España/México e inglés de EE.UU.), diseño de Brand Store y programación de microservicios con la Amazon SP-API.</li>
       </ul>
@@ -962,7 +965,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><strong>Clases de inglés:</strong> Tarifa plana mensual de 79€/mes (o pactada para clases privadas) abonada antes del día 1 del mes lectivo. <strong>Sin permanencia</strong>.</li>
         <li><strong>Consultorías IT y 1 a 1:</strong> Pago íntegro al confirmar la reserva de fecha y hora.</li>
         <li><strong>Desarrollo Freelance:</strong> 50% de anticipo inicial como reserva de sprint y 50% a la entrega y validación en staging o pase a producción.</li>
-        <li>Pagos procesados mediante plataformas seguras certificadas PCI-DSS y PSD2: tarjeta vía <strong>Stripe</strong>, transferencia bancaria, Bizum o PayPal.</li>
+        <li>Pagos procesados mediante plataformas seguras certificadas PCI-DSS y PSD2: tarjeta vía pasarelas oficiales autorizadas (<strong>Razorpay</strong> / <strong>Stripe</strong>), transferencia bancaria, Bizum o PayPal.</li>
       </ul>
 
       <h3>4. Propiedad Intelectual y Cesión de Derechos</h3>
@@ -1019,7 +1022,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>Para alumnos menores de 14 años, la inscripción y el consentimiento del tratamiento de datos deben formalizarse expresamente por sus progenitores o tutores legales conforme al Art. 7 de la LOPDGDD.</p>
 
       <h3>3. Conservación y Encargados del Tratamiento</h3>
-      <p>Los datos se conservan durante la vigencia de la relación contractual y, tras ella, durante los plazos legalmente exigibles (mínimo 5 años para efectos mercantiles y tributarios). Los datos no se ceden a terceros para fines comerciales. Se utilizan encargados de tratamiento bajo garantías europeas (Web3Forms para formularios, Google Workspace/Meet para videoconferencias y Stripe para pasarela de pagos).</p>
+      <p>Los datos se conservan durante la vigencia de la relación contractual y, tras ella, durante los plazos legalmente exigibles (mínimo 5 años para efectos mercantiles y tributarios). Los datos no se ceden a terceros para fines comerciales. Se utilizan encargados de tratamiento bajo garantías europeas (Web3Forms para formularios, Google Workspace/Meet para videoconferencias y pasarelas de pago seguras PCI-DSS Nivel 1 como Razorpay y Stripe).</p>
 
       <h3>4. Derechos ARCO-POL del Usuario</h3>
       <p>Puedes ejercitar de forma gratuita tus derechos de Acceso, Rectificación, Supresión ("olvido"), Limitación, Portabilidad y Oposición enviando un correo electrónico acreditando tu identidad a:</p>
@@ -1070,7 +1073,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div class="contract-template-box">
         <div class="contract-template-title">📦 Modelo 2: Acuerdo Marco de Consultoría Amazon Marketplaces, IT y NDA Bipartito</div>
-        <p><strong>Alcance:</strong> Diagnósticos de catálogo en Seller Central (España, UE, México y EE.UU.), resolución de errores 5665/8572, auditorías FBA/PPC y arquitectura cloud/SP-API.</p>
+        <p><strong>Alcance:</strong> Diagnósticos de catálogo en Seller Central (España, UE, México y EE.UU.), resolución de errores 5665/8572, auditorías FBA y visibilidad y arquitectura cloud/SP-API.</p>
         <p><strong>Confidencialidad Estricta (NDA):</strong> Toda la información comercial, credenciales de Seller Central / permisos de usuario secundario, costes de producto, márgenes y métricas de facturación del Cliente serán tratadas bajo riguroso secreto profesional con prohibición de divulgación a terceros.</p>
         <p><strong>Vigencia del Secreto:</strong> Mínimo 3 años tras la finalización del servicio.</p>
       </div>
