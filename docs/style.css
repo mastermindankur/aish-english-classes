@@ -1922,14 +1922,14 @@ p { color: var(--text-secondary); }
    ========================================================================== */
 
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(36px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .scroll-reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ==========================================================================

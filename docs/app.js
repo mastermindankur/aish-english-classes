@@ -569,6 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
      8. Scroll Reveal Setup
      ========================================================================== */
   const revealElements = document.querySelectorAll('.scroll-reveal');
+  revealElements.forEach(el => el.classList.add('active'));
 
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -578,18 +579,9 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px', threshold: 0.08 });
+    }, { rootMargin: '50px 0px', threshold: 0.01 });
 
     revealElements.forEach(el => revealObserver.observe(el));
-
-    setTimeout(() => {
-      revealElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) el.classList.add('active');
-      });
-    }, 150);
-  } else {
-    revealElements.forEach(el => el.classList.add('active'));
   }
 
   function triggerScrollRevealsInPanel(panelId) {
@@ -603,6 +595,9 @@ document.addEventListener('DOMContentLoaded', () => {
     panel.querySelectorAll('.stat-num[data-target]').forEach(el => {
       animateCounter(el);
     });
+
+    const contact = document.getElementById('contacto');
+    if (contact) contact.classList.add('active');
   }
 
 
