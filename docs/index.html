@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="englishwithaish.online: Clases de inglés online en grupos de 4, Consultoría Amazon Marketplaces &amp; IT (España, UE, México y EE.UU.), Listings masivos y Operativa End-to-End.">
+  <meta name="keywords" content="clases de ingles online, consultoria amazon, amazon marketplaces, amazon seller central, listings amazon, flat files amazon, error 5665, error 8572, logistica fba, amazon sp-api, bilbao">
+  <title>englishwithaish.online | Clases de Inglés, Consultoría Amazon &amp; IT (EU, ES, MX, US)</title>
+  <link rel="canonical" href="https://englishwithaish.online/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://englishwithaish.online/">
+  <meta property="og:title" content="englishwithaish.online | Clases de Inglés &amp; Consultoría Amazon Marketplaces">
+  <meta property="og:description" content="Aprende inglés en grupos reducidos de 4 alumnos y escala tu negocio en Amazon Marketplaces (España, UE, México y EE.UU.) con operativa técnica end-to-end.">
+  <meta property="og:image" content="https://englishwithaish.online/aishwarya.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Header / Navbar -->
+  <header class="main-header" id="main-header">
+    <div class="container nav-container">
+      <a href="#english" class="logo" id="header-brand-logo">
+        <span class="logo-accent">englishwithaish</span><span>.online</span>
+      </a>
+
+      <!-- Quick Switcher in Header for Desktop -->
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <div class="nav-services-quick" role="navigation" aria-label="Cambio rápido de servicios">
+          <button type="button" class="nav-service-pill active" data-tab-target="english">🎓 Inglés</button>
+          <button type="button" class="nav-service-pill" data-tab-target="it-consulting">📦 Amazon &amp; IT</button>
+          <button type="button" class="nav-service-pill" data-tab-target="online-consulting">🌐 1 a 1 Seller Central</button>
+          <button type="button" class="nav-service-pill" data-tab-target="freelance">🚀 Catálogo Freelance</button>
+        </div>
+        <a href="#contacto" class="btn btn-secondary nav-cta" id="header-cta-btn">Contactar</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Menú móvil">
+      <div class="mobile-nav-services">
+        <p class="mobile-section-title">Servicios Disponibles</p>
+        <button type="button" class="mobile-tab-btn active" data-tab-target="english">🎓 Clases de Inglés (Grupos de 4)</button>
+        <button type="button" class="mobile-tab-btn" data-tab-target="it-consulting">📦 Consultoría Amazon &amp; IT (EU, ES, MX, US)</button>
+        <button type="button" class="mobile-tab-btn" data-tab-target="online-consulting">🌐 Consultoría Online 1 a 1 (Seller Central)</button>
+        <button type="button" class="mobile-tab-btn" data-tab-target="freelance">🚀 Gestión de Catálogo &amp; SP-API</button>
+      </div>
+      <a href="#contacto" class="mobile-nav-link mobile-nav-cta">Solicitar Información →</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Multi-Service Primary Tabs Selector (WAI-ARIA Pattern) -->
+    <section class="services-tab-bar" aria-label="Selector de Servicios">
+      <div class="container">
+        <div class="tabs-control-header">
+          <span class="section-tag">Áreas de Especialización</span>
+        </div>
+        <div class="tabs-nav-container" role="tablist" aria-label="Servicios profesionales disponibles">
+          <button type="button" role="tab" id="tab-english" aria-controls="panel-english" aria-selected="true" tabindex="0" class="tab-trigger active" data-tab="english">
+            <span class="tab-icon" aria-hidden="true">🎓</span>
+            <span class="tab-meta">
+              <span class="tab-title">Clases de Inglés</span>
+              <span class="tab-sub">Grupos de 4 • Online</span>
+            </span>
+          </button>
+          <button type="button" role="tab" id="tab-it-consulting" aria-controls="panel-it-consulting" aria-selected="false" tabindex="-1" class="tab-trigger" data-tab="it-consulting">
+            <span class="tab-icon" aria-hidden="true">📦</span>
+            <span class="tab-meta">
+              <span class="tab-title">Amazon &amp; IT Consulting</span>
+              <span class="tab-sub">EU • España • México • EE.UU.</span>
+            </span>
+          </button>
+          <button type="button" role="tab" id="tab-online-consulting" aria-controls="panel-online-consulting" aria-selected="false" tabindex="-1" class="tab-trigger" data-tab="online-consulting">
+            <span class="tab-icon" aria-hidden="true">🌐</span>
+            <span class="tab-meta">
+              <span class="tab-title">Consultoría Online 1 a 1</span>
+              <span class="tab-sub">Seller Central en Directo</span>
+            </span>
+          </button>
+          <button type="button" role="tab" id="tab-freelance" aria-controls="panel-freelance" aria-selected="false" tabindex="-1" class="tab-trigger" data-tab="freelance">
+            <span class="tab-icon" aria-hidden="true">🚀</span>
+            <span class="tab-meta">
+              <span class="tab-title">Gestión de Catálogo</span>
+              <span class="tab-sub">Listings • A+ • SP-API</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         TAB PANEL 1: CLASES DE INGLÉS (ENGLISH CLASSES)
+         ===================================================================== -->
+    <div role="tabpanel" id="panel-english" aria-labelledby="tab-english" class="tab-panel active" tabindex="0">
+      
+      <!-- English Hero Section -->
+      <section class="hero-section">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="container hero-container">
+          <div class="hero-content-left">
+            <div class="badge-container">
+              <span class="badge badge-primary">✨ Pierde la vergüenza al hablar</span>
+              <span class="badge badge-accent">👥 Solo 4 personas por grupo</span>
+              <span class="badge badge-date" id="hero-batch-badge">📅 Próximo grupo: Viernes</span>
+            </div>
+            <h1 class="hero-title">
+              Supera el bloqueo y <span class="gradient-text">habla inglés</span> con total confianza.
+            </h1>
+            <p class="hero-subtitle">
+              ¿Te quedas en blanco en el trabajo o viajas con miedo? Aprende de forma práctica en grupos súper reducidos de <strong>solo 4 alumnos</strong>. Clases dinámicas y personalizadas para profesionales y estudiantes en España.
+            </p>
+            
+            <ul class="hero-benefits">
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🔒</span>
+                <span><strong>Adiós al ridículo:</strong> Un espacio seguro, sin juicios, diseñado para soltarte.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">📈</span>
+                <span><strong>Impulso profesional:</strong> Prepárate para reuniones internacionales, entrevistas y viajes.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">💬</span>
+                <span><strong>Hablas de verdad:</strong> Al ser solo 4, participas activamente durante toda la sesión.</span>
+              </li>
+            </ul>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-wrapper">
+              <p class="countdown-label" id="countdown-label">🚀 El próximo grupo de los viernes empieza en:</p>
+              <div class="countdown-timer" id="countdown-timer">
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-days">00</span>
+                  <span class="countdown-text">días</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-hours">00</span>
+                  <span class="countdown-text">horas</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-minutes">00</span>
+                  <span class="countdown-text">min</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-seconds">00</span>
+                  <span class="countdown-text">seg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-primary btn-lg btn-shine select-service-cta" data-service-value="Clases de Inglés (Grupos de 4)">Quiero mi plaza</a>
+              <a href="#beneficios" class="btn btn-outline btn-lg">Ver metodología</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual-right">
+            <div class="hero-image-card">
+              <img src="aishwarya.png" alt="Aishwarya, profesora nativa de inglés en España" class="hero-image">
+              <div class="floating-badge badge-teacher">
+                <span class="floating-badge-icon" aria-hidden="true">👩‍🏫</span>
+                <div>
+                  <strong>Aishwarya</strong>
+                  <p>Profesora Nativa en Bilbao, España</p>
+                </div>
+              </div>
+              <div class="floating-badge badge-price">
+                <span class="floating-badge-icon" aria-hidden="true">💶</span>
+                <div>
+                  <strong>79€ / mes</strong>
+                  <p>Todo incluido. Sin permanencia</p>
+                </div>
+              </div>
+              <div class="floating-badge badge-group">
+                <span class="floating-badge-icon" aria-hidden="true">👥</span>
+                <div>
+                  <strong>Grupos de 4</strong>
+                  <p>Atención personalizada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar English -->
+      <section class="stats-section" aria-label="Estadísticas de clases de inglés">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+              </div>
+              <p class="stat-label">Años de experiencia</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="80">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Tiempo hablando en clase</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="4">0</span>
+              </div>
+              <p class="stat-label">Alumnos máx. por grupo</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Clases online y en directo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Batches of 4 Section -->
+      <section id="beneficios" class="features-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Metodología Única</span>
+            <h2>¿Por qué limitamos las clases a <span class="highlight">04 alumnos</span>?</h2>
+            <p class="section-subtitle">
+              Olvídate de las clases masivas donde solo escuchas de forma pasiva. El aprendizaje real requiere participación activa.
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3>Hablas el 80% del tiempo</h3>
+              <p>En un grupo tradicional de 15 alumnos, apenas hablas 3 minutos por clase. Con 4 alumnos, estarás conversando, debatiendo y practicando de forma constante.</p>
+              <div class="card-shimmer"></div>
+            </div>
+            <div class="feature-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3>Corrección en tiempo real</h3>
+              <p>Prestaré atención a cada detalle de tu pronunciación y gramática. Resolveremos tus dudas en el acto y adaptaremos el ritmo a tus necesidades.</p>
+              <div class="card-shimmer"></div>
+            </div>
+            <div class="feature-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <h3>Tarifa plana flexible</h3>
+              <p>Por solo 79€ al mes tendrás acceso a tus clases semanales en directo y material complementario. Sin contratos de permanencia ni costes sorpresa.</p>
+              <div class="card-shimmer"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course Details Section -->
+      <section id="clases-online" class="details-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Clases 100% Online</span>
+            <h2>¿Qué hacemos en nuestras clases online?</h2>
+            <p class="section-subtitle">
+              Un método dinámico y participativo para que ganes seguridad y fluidez natural.
+            </p>
+          </div>
+          <div class="details-grid">
+            <div class="detail-card">
+              <div class="detail-number">01</div>
+              <h3>Spoken English</h3>
+              <p>Foco absoluto en vocabulario cotidiano, pronunciación correcta y expresiones naturales para comunicarte sin rodeos.</p>
+            </div>
+            <div class="detail-card">
+              <div class="detail-number">02</div>
+              <h3>Debates en Grupo</h3>
+              <p>Discusiones grupales guiadas sobre temas de actualidad e interés común para ejercitar tu agilidad mental y vocabulario en directo.</p>
+            </div>
+            <div class="detail-card">
+              <div class="detail-number">03</div>
+              <h3>Conversación Práctica</h3>
+              <p>Simulaciones de situaciones cotidianas (viajes, trabajo, llamadas) diseñadas para romper el miedo y ganar confianza al hablar.</p>
+            </div>
+            <div class="detail-card">
+              <div class="detail-number">04</div>
+              <h3>Tareas (Assignments)</h3>
+              <p>Ejercicios semanales recomendados para practicar fuera de clase y consolidar tu avance de manera constante.</p>
+            </div>
+          </div>
+          
+          <div class="start-banner">
+            <span class="calendar-icon" aria-hidden="true">📅</span>
+            <div>
+              <h3>Próximo grupo online empieza el <strong id="course-start-date">Viernes</strong></h3>
+              <p>Las clases son en grupos súper reducidos de máximo 4 personas. ¡Reserva tu plaza antes de que se completen!</p>
+            </div>
+            <a href="#contacto" class="btn btn-secondary select-service-cta" data-service-value="Clases de Inglés (Grupos de 4)">Quiero apuntarme</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonios" class="testimonials-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Lo que dicen los alumnos</span>
+            <h2>Personas reales, <span class="gradient-text">resultados reales</span></h2>
+            <p class="section-subtitle">Más de 5 años ayudando a estudiantes y profesionales a ganar confianza al hablar inglés.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="testimonial-text">
+                "Llevaba años con miedo a hablar inglés en reuniones de trabajo. Con Aishwarya, en 2 meses ya dirigía presentaciones en inglés. El grupo reducido hace toda la diferencia."
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">MC</div>
+                <div>
+                  <strong>María C.</strong>
+                  <p>Directora de Marketing, Madrid</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card testimonial-featured">
+              <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="testimonial-text">
+                "Aishwarya es increíble. Su método es muy práctico y nunca me sentí juzgado por mis errores. El ambiente de 4 personas es perfecto para perder la vergüenza rápido."
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">JR</div>
+                <div>
+                  <strong>Javi R.</strong>
+                  <p>Ingeniero, Bilbao</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="testimonial-text">
+                "Mi hija de 14 años pasó de odiar el inglés a disfrutarlo. Aishwarya tiene un don especial para conectar con los estudiantes jóvenes. Totalmente recomendado."
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">LS</div>
+                <div>
+                  <strong>Laura S.</strong>
+                  <p>Madre de alumna, Santander</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="sobre-mi" class="about-section scroll-reveal">
+        <div class="container about-container">
+          <div class="about-image-wrapper">
+            <div class="about-image-card">
+              <img src="aishwarya.png" alt="Aishwarya, profesora nativa de inglés" class="about-image">
+              <div class="about-badge">
+                <span class="about-badge-icon" aria-hidden="true">📍</span>
+                <span>Bilbao, España</span>
+              </div>
+            </div>
+
+            <div class="contact-links" style="margin-top: 0; width: 100%; max-width: 360px;">
+              <a href="mailto:aishwarya.gupta.khera@gmail.com" class="contact-link" id="about-email-primary">
+                <span class="contact-link-icon" aria-hidden="true">✉️</span>
+                <span>aishwarya.gupta.khera@gmail.com</span>
+              </a>
+              <a href="mailto:garg_aishwarya@yahoo.com" class="contact-link" id="about-email-secondary">
+                <span class="contact-link-icon" aria-hidden="true">✉️</span>
+                <span>garg_aishwarya@yahoo.com</span>
+              </a>
+              <a href="https://wa.me/34673275711" target="_blank" rel="noopener noreferrer" class="contact-link" id="about-whatsapp">
+                <span class="contact-link-icon" aria-hidden="true">💬</span>
+                <span>+34 673 275 711 <em>(WhatsApp)</em></span>
+              </a>
+              <a href="https://www.linkedin.com/in/aishwarya-gupta-k-3612b3221/details/experience/" target="_blank" rel="noopener noreferrer" class="contact-link" id="about-linkedin">
+                <span class="contact-link-icon" aria-hidden="true">🔗</span>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <div class="about-content">
+            <span class="section-tag">Conoce a tu profesora</span>
+            <h2>Hi! I am <span class="gradient-text">Aishwarya</span> 👋</h2>
+            <p class="about-bio-lead">
+              Soy profesora nativa de inglés y actualmente trabajo como <strong>Auxiliar de Conversación (Language Assistant)</strong> en un centro educativo en Bilbao, España.
+            </p>
+            <div class="about-bio-details">
+              <p>
+                Tengo más de <strong>5 años de experiencia</strong> ayudando a personas de todas las edades a dominar el inglés. He impartido clases a adultos, niños pequeños, y estudiantes de primaria y secundaria. 
+              </p>
+              <p>
+                Sé exactamente qué dificultades tienen los estudiantes españoles al hablar inglés y me especializo en hacer que el aprendizaje sea <strong>sencillo, sin complicaciones y basado en situaciones reales</strong>.
+              </p>
+            </div>
+            <ul class="about-points">
+              <li>
+                <span class="point-icon" aria-hidden="true">✓</span>
+                <span>Hablante nativa (inglés natural y pronunciación clara)</span>
+              </li>
+              <li>
+                <span class="point-icon" aria-hidden="true">✓</span>
+                <span>Experiencia certificada en colegios e institutos públicos</span>
+              </li>
+              <li>
+                <span class="point-icon" aria-hidden="true">✓</span>
+                <span>Especialista en superar la barrera de la timidez al hablar</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =====================================================================
+         TAB PANEL 2: CONSULTORÍA AMAZON MARKETPLACES & IT (EU, ES, MX, US)
+         ===================================================================== -->
+    <div role="tabpanel" id="panel-it-consulting" aria-labelledby="tab-it-consulting" class="tab-panel hidden" hidden tabindex="0">
+      
+      <!-- Amazon & IT Consulting Hero -->
+      <section class="hero-section">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="container hero-container">
+          <div class="hero-content-left">
+            <div class="badge-container">
+              <span class="badge badge-primary">🌍 Amazon EU • España • México • EE.UU.</span>
+              <span class="badge badge-accent">📦 Operativa End-to-End</span>
+              <span class="badge badge-date">⚡ SP-API &amp; Automatización IT</span>
+            </div>
+            <h1 class="hero-title">
+              Consultoría Amazon Marketplaces &amp; IT: <span class="gradient-text">Lista y Opera de Extremo a Extremo</span> en Europa, España, México y EE.UU.
+            </h1>
+            <p class="hero-subtitle">
+              Te enseñamos y acompañamos en todo el ciclo operativo y técnico: desde cómo dar de alta y optimizar tus listings de producto con SEO de conversión, hasta la logística FBA transfronteriza, Brand Registry y la integración de la Selling Partner API (SP-API) de Amazon con tus sistemas.
+            </p>
+            
+            <ul class="hero-benefits">
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">📦</span>
+                <span><strong>Creación &amp; Optimización de Listings:</strong> Cómo subir productos en Amazon con SEO transfronterizo, atributos por categoría, gestión de variaciones, Brand Registry y contenido A+.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🌐</span>
+                <span><strong>Operativa Transfronteriza (EU, España, México, EE.UU.):</strong> Dominio de logística FBA, red Pan-Europea, cuentas unificadas de Norteamérica, códigos EAN/UPC/GS1, aduanas e IVA/RFC/Sales Tax.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">💻</span>
+                <span><strong>Integraciones Técnicas &amp; SP-API:</strong> Automatización de sincronización de stock con ERP, actualización de feeds de catálogo, precios dinámicos y reportes automáticos con Amazon SP-API.</span>
+              </li>
+            </ul>
+
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-primary btn-lg btn-shine select-service-cta" data-service-value="Consultoría Amazon &amp; IT">Solicitar Consultoría Amazon</a>
+              <a href="#servicios-it" class="btn btn-outline btn-lg">Ver Especialidades</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual-right">
+            <!-- Simulated Cloud & Seller Central Operations Terminal Window -->
+            <div class="mock-terminal-window">
+              <div class="terminal-header">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+                <span class="terminal-title">amazon-seller-ops inspect --marketplaces=ES,EU,MX,US</span>
+              </div>
+              <div class="terminal-body">
+                <p class="term-cmd"><span class="term-prompt">$</span> amazon-marketplaces status --all</p>
+                <p class="term-output">[✓] Amazon España &amp; Pan-EU: Active (FBA Synced • Buy Box 96%)<br>[✓] Amazon México: Active (RFC Compliant • FBA MX)<br>[✓] Amazon EE.UU. (US): Active (Unified Account • FBA US)<br>[✓] SP-API Data Pipeline: Connected to ERP (Live Sync)</p>
+                
+                <div class="term-status-row">
+                  <span>Listings en Buy Box</span>
+                  <span class="status-live"><span class="status-dot-pulse"></span> 96.4% Activo</span>
+                </div>
+                <div class="term-status-row">
+                  <span>Logística FBA Transfronteriza</span>
+                  <span style="color:#38bdf8;">📦 ES • DE • FR • MX • US</span>
+                </div>
+                <div class="term-status-row">
+                  <span>Integración SP-API / ERP</span>
+                  <span style="color:#10b981;">⚡ Sync Automático de Stock</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar Amazon & IT -->
+      <section class="stats-section" aria-label="Estadísticas de Consultoría Amazon Marketplaces">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="4">0</span>
+              </div>
+              <p class="stat-label">Mercados Clave: ES, EU, MX, US</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Operativa End-to-End cubierta</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="15">0</span><span class="stat-suffix">K+</span>
+              </div>
+              <p class="stat-label">Listings creados y optimizados</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="48">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Aumento medio de conversión</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Amazon & IT Services Grid -->
+      <section id="servicios-it" class="features-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Servicios Especializados</span>
+            <h2>Opera con éxito en <span class="highlight">Amazon Marketplaces</span></h2>
+            <p class="section-subtitle">
+              Te enseñamos y gestionamos la operativa completa para vender en España, Europa, México y Estados Unidos sin tropiezos.
+            </p>
+          </div>
+          <div class="service-cards-grid">
+            
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">📦</div>
+              <h3>Alta &amp; Creación de Listings</h3>
+              <p>Cómo subir productos paso a paso mediante Seller Central o ficheros planos (flat files). Resolución de errores comunes (5665 de marca, 8572 de código de barras), categorización exacta y estructura de variaciones (parent-child).</p>
+              <span class="service-card-tag">Listings • Flat Files • Errores 5665/8572</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🔍</div>
+              <h3>SEO en Amazon &amp; Copywriting Bilingüe</h3>
+              <p>Investigación de palabras clave con Helium 10 y Jungle Scout. Redacción persuasiva adaptada a cada mercado: español de España, español de México e inglés nativo para EE.UU., optimizando el algoritmo A10.</p>
+              <span class="service-card-tag">Helium 10 • SEO A10 • Copy Bilingüe</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🚚</div>
+              <h3>Logística FBA &amp; Envíos Transfronterizos</h3>
+              <p>Configuración de planes de envío a almacenes de Amazon en España, red Pan-Europea, México y EE.UU. Gestión de códigos GS1/EAN/UPC, etiquetado FNSKU, aduanas, aranceles y cálculo de tarifas de almacenamiento.</p>
+              <span class="service-card-tag">FBA • Pan-EU • México • EE.UU. • GS1</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">✨</div>
+              <h3>Brand Registry &amp; Contenido A+</h3>
+              <p>Tramitación de Registro de Marca para protección contra falsificaciones y secuestro de Buy Box. Diseño de módulos de Contenido A+ (Enhanced Brand Content), infografías de producto y Storefronts multipágina.</p>
+              <span class="service-card-tag">Brand Registry • Contenido A+ • Stores</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">📈</div>
+              <h3>Amazon Ads (PPC) &amp; Lanzamientos</h3>
+              <p>Estructuración de campañas Sponsored Products, Sponsored Brands y Sponsored Display para posicionar tus listings en la primera página con ACOS controlado y maximización del RoAS en cada país.</p>
+              <span class="service-card-tag">PPC • Sponsored Products • ACOS • RoAS</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">💻</div>
+              <h3>Integración Tecnológica SP-API</h3>
+              <p>Conexión de la Selling Partner API de Amazon con tu ERP/CRM (Shopify, WooCommerce, Odoo, SAP). Automatización de actualización de inventarios, sincronización de pedidos, precios dinámicos y facturación automática con IVA/RFC.</p>
+              <span class="service-card-tag">SP-API • ERP Sync • Automatización IT</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Amazon Operations Process Section -->
+      <section class="details-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Metodología End-to-End</span>
+            <h2>Cómo desplegamos tu operativa en Amazon</h2>
+            <p class="section-subtitle">Un proceso ordenado para pasar de la idea o producto a ventas internacionales recurrentes.</p>
+          </div>
+          <div class="process-steps-grid">
+            <div class="step-card">
+              <div class="step-badge-num">01</div>
+              <h3>Auditoría &amp; Viabilidad</h3>
+              <p>Analizamos tus productos, márgenes, códigos de barras (GS1) y competencia en España, Europa, México o EE.UU.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-badge-num">02</div>
+              <h3>Listings &amp; Contenido A+</h3>
+              <p>Redactamos títulos, bullets y términos de búsqueda optimizados, y diseñamos el contenido visual A+ de alto impacto.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-badge-num">03</div>
+              <h3>Logística FBA &amp; SP-API</h3>
+              <p>Configuramos el plan de envío a almacenes de Amazon, generamos etiquetas FNSKU y conectamos los feeds de inventario.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-badge-num">04</div>
+              <h3>Lanzamiento &amp; Escalado</h3>
+              <p>Activamos campañas publicitarias PPC, monitorizamos la Buy Box y optimizamos el ACOS para escalar la rentabilidad.</p>
+            </div>
+          </div>
+
+          <!-- Amazon Packages -->
+          <div class="packages-grid">
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Auditoría de Catálogo</h3>
+                <p class="package-desc">Diagnóstico exhaustivo de listings y oportunidades</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">490€</span>
+                <span class="period-label">/ informe único</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Revisión de SEO y títulos de tus listings actuales</li>
+                <li><span class="check" aria-hidden="true">✓</span> Análisis de competencia y palabras clave en ES, MX o US</li>
+                <li><span class="check" aria-hidden="true">✓</span> Detección de fugas en Buy Box y márgenes FBA</li>
+                <li><span class="check" aria-hidden="true">✓</span> Sesión de 60 min por videollamada con plan de acción</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Consultoría Amazon &amp; IT">Solicitar Auditoría</a>
+            </div>
+
+            <div class="package-card featured-package">
+              <span class="package-popular-tag">Más Solicitado</span>
+              <div class="package-header">
+                <h3>Lanzamiento End-to-End</h3>
+                <p class="package-desc">Despliegue integral de producto en un mercado</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">1.490€</span>
+                <span class="period-label">/ lanzamiento</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Alta completa de listing optimizado con SEO de conversión</li>
+                <li><span class="check" aria-hidden="true">✓</span> Diseño y subida de Contenido A+ (Enhanced Brand Content)</li>
+                <li><span class="check" aria-hidden="true">✓</span> Creación del plan de envío FBA y etiquetado FNSKU</li>
+                <li><span class="check" aria-hidden="true">✓</span> Configuración inicial de campañas Amazon Ads (PPC)</li>
+                <li><span class="check" aria-hidden="true">✓</span> 30 días de acompañamiento operativo directo</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary btn-block select-service-cta" data-service-value="Consultoría Amazon &amp; IT">Contratar Lanzamiento</a>
+            </div>
+
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Gestión &amp; Retainer Mensual</h3>
+                <p class="package-desc">Operativa continua y optimización tecnológica</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">990€</span>
+                <span class="period-label">/ mes</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Gestión y mantenimiento activo de catálogo y stock</li>
+                <li><span class="check" aria-hidden="true">✓</span> Optimización semanal de campañas de PPC y ACOS</li>
+                <li><span class="check" aria-hidden="true">✓</span> Resolución de casos y tickets con Seller Support</li>
+                <li><span class="check" aria-hidden="true">✓</span> Soporte en integración SP-API y sincronización ERP</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Consultoría Amazon &amp; IT">Consultar Disponibilidad</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =====================================================================
+         TAB PANEL 3: CONSULTORÍA ONLINE 1 A 1 (AMAZON SELLER CENTRAL EN DIRECTO)
+         ===================================================================== -->
+    <div role="tabpanel" id="panel-online-consulting" aria-labelledby="tab-online-consulting" class="tab-panel hidden" hidden tabindex="0">
+      
+      <!-- Online Consulting Hero -->
+      <section class="hero-section">
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="container hero-container">
+          <div class="hero-content-left">
+            <div class="badge-container">
+              <span class="badge badge-primary">🎯 Sesiones 1 a 1 en Directo</span>
+              <span class="badge badge-accent">📦 Pantalla Compartida Seller Central</span>
+              <span class="badge badge-date">🌐 Mercados ES, EU, MX, US</span>
+            </div>
+            <h1 class="hero-title">
+              Consultoría Online 1 a 1: <span class="gradient-text">Operativa Amazon Seller Central</span> en Directo.
+            </h1>
+            <p class="hero-subtitle">
+              Sesiones individuales y privadas por videollamada compartiendo pantalla directamente sobre tu cuenta de Amazon Seller Central (España, UE, México o Estados Unidos). Resolvemos tus bloqueos técnicos en tiempo real: creación y subida de listings, corrección de errores 5665 / 8572, preparación de envíos FBA y optimización de campañas PPC.
+            </p>
+            
+            <ul class="hero-benefits">
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🖥️</span>
+                <span><strong>Pantalla Compartida en Vivo:</strong> Trabajamos juntos en tu cuenta o plantillas paso a paso, viendo cada botón, atributo y configuración exacta.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">📹</span>
+                <span><strong>Grabación en HD &amp; Checklist de Ejecución:</strong> Llévate la sesión grabada y una guía con las plantillas flat file y atributos requeridos.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">💬</span>
+                <span><strong>Soporte Posterior de 7 Días:</strong> Resuelve dudas de seguimiento durante los 7 días posteriores mientras aplicas los cambios en tus listings o envíos.</span>
+              </li>
+            </ul>
+
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-primary btn-lg btn-shine select-service-cta" data-service-value="Consultoría Online 1 a 1">Agendar Sesión en Directo</a>
+              <a href="#tematicas-online" class="btn btn-outline btn-lg">Ver Temáticas de Amazon</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual-right">
+            <!-- Simulated Video Call Mockup -->
+            <div class="mock-video-card">
+              <div class="video-call-header">
+                <div>
+                  <strong style="color:#fff; font-size:0.95rem;">Sesión 1 a 1: Seller Central en Vivo</strong>
+                  <p style="font-size:0.75rem; color:var(--text-muted);">Google Meet / Zoom • Compartiendo pantalla</p>
+                </div>
+                <span class="call-badge"><span class="status-dot-pulse"></span> 45:00 min</span>
+              </div>
+              
+              <div class="video-grid-preview">
+                <div class="video-slot">
+                  <div class="slot-avatar">A</div>
+                  <span class="slot-name">Aishwarya (Especialista Amazon)</span>
+                  <span style="font-size:0.6875rem; color:#10b981; margin-top:0.25rem;">● Micrófono activo</span>
+                </div>
+                <div class="video-slot">
+                  <div class="slot-avatar" style="background:var(--gradient-warm);">Tú</div>
+                  <span class="slot-name">Tu Cuenta Seller Central</span>
+                  <span style="font-size:0.6875rem; color:#38bdf8; margin-top:0.25rem;">Compartiendo pantalla</span>
+                </div>
+              </div>
+
+              <div class="call-agenda-list">
+                <div class="agenda-item">
+                  <span class="icon">✓</span>
+                  <span>Diagnóstico de catálogo, ASINs y variaciones</span>
+                </div>
+                <div class="agenda-item">
+                  <span class="icon">✓</span>
+                  <span>Corrección de flat files y errores 5665 / 8572</span>
+                </div>
+                <div class="agenda-item">
+                  <span class="icon">✓</span>
+                  <span>Configuración de envíos FBA y campañas PPC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar Online Consulting -->
+      <section class="stats-section" aria-label="Estadísticas de Consultoría Online">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="250">0</span><span class="stat-suffix">+</span>
+              </div>
+              <p class="stat-label">Sesiones Seller Central realizadas</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Tasa de éxito en desbloqueo de listings</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="4">0</span>
+              </div>
+              <p class="stat-label">Mercados dominados (ES, EU, MX, US)</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="24">0</span><span class="stat-suffix">h</span>
+              </div>
+              <p class="stat-label">Tiempo máximo de respuesta</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Online Topics -->
+      <section id="tematicas-online" class="features-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Áreas de Asesoramiento Práctico</span>
+            <h2>¿En qué podemos trabajar juntos en Seller Central?</h2>
+            <p class="section-subtitle">
+              Sesiones enfocadas en darte respuestas prácticas, resolver errores bloqueantes y enseñarte la operativa real paso a paso.
+            </p>
+          </div>
+          <div class="service-cards-grid">
+            
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">📦</div>
+              <h3>Creación &amp; Optimización de Listings (Manual y Bulk)</h3>
+              <p>Cómo estructurar títulos de alto CTR, bullet points persuasivos enriquecidos con keywords, atributos obligatorios por categoría y matrices de variación parent-child sin errores de combinación.</p>
+              <span class="service-card-tag">Seller Central • Flat Files • Variaciones • SEO</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🚨</div>
+              <h3>Resolución de Errores de Catálogo (5665, 8572, 5461)</h3>
+              <p>Aprobación de marca sin registro formal previo (Brand Approval 5665), resolución de discrepancias con códigos de barras GS1 (Error 8572) y recuperación rápida de ASINs suprimidos o bloqueados.</p>
+              <span class="service-card-tag">Error 5665 • Error 8572 • GS1 • ASIN Suprimido</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🚚</div>
+              <h3>Logística FBA Transfronteriza (Send to Amazon)</h3>
+              <p>Configuración de envíos paso a paso para almacenes de España/UE, México y EE.UU. Etiquetado FNSKU, peso, dimensiones de bulto, selección de transportistas asociados y control de documentación aduanera.</p>
+              <span class="service-card-tag">FBA • Send to Amazon • FNSKU • Aduanas</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">📈</div>
+              <h3>Auditoría de Campañas PPC &amp; Amazon Ads</h3>
+              <p>Estructuración rentable de campañas Sponsored Products y Sponsored Brands. Control estricto de ACoS/TACOS, minería de palabras clave negativas, optimización de pujas y reasignación de presupuestos.</p>
+              <span class="service-card-tag">Amazon Ads • PPC • ACoS / TACOS • Sponsored Products</span>
+            </div>
+
+          </div>
+
+          <!-- Packages Online -->
+          <div class="packages-grid">
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Sesión Express (45 min)</h3>
+                <p class="package-desc">Desbloqueo rápido para un error puntual o duda de catálogo</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">75€</span>
+                <span class="period-label">/ sesión</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> 45 minutos intensivos con pantalla compartida en directo</li>
+                <li><span class="check" aria-hidden="true">✓</span> Grabación completa en vídeo HD</li>
+                <li><span class="check" aria-hidden="true">✓</span> Resumen ejecutivo con los pasos de solución inmediata</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Consultoría Online 1 a 1">Reservar Sesión Express</a>
+            </div>
+
+            <div class="package-card featured-package">
+              <span class="package-popular-tag">Más Solicitada</span>
+              <div class="package-header">
+                <h3>Sesión Deep Dive (90 min)</h3>
+                <p class="package-desc">Diagnóstico y trabajo operativo a fondo en tu catálogo</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">140€</span>
+                <span class="period-label">/ sesión</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> 90 minutos de trabajo directo en tu cuenta Seller Central</li>
+                <li><span class="check" aria-hidden="true">✓</span> Auditoría previa de listings o plantillas flat file</li>
+                <li><span class="check" aria-hidden="true">✓</span> Plan de acción y resolución de errores en vivo</li>
+                <li><span class="check" aria-hidden="true">✓</span> 7 días de soporte por WhatsApp para seguimiento</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary btn-block select-service-cta" data-service-value="Consultoría Online 1 a 1">Reservar Deep Dive</a>
+            </div>
+
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Mentoría Mensual de Vendedor</h3>
+                <p class="package-desc">Acompañamiento continuo durante el lanzamiento o expansión</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">450€</span>
+                <span class="period-label">/ mes</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> 4 sesiones de 60 minutos (1 por semana)</li>
+                <li><span class="check" aria-hidden="true">✓</span> Revisión continua de listings, envíos FBA y métricas PPC</li>
+                <li><span class="check" aria-hidden="true">✓</span> Soporte directo por WhatsApp para incidencias urgentes</li>
+                <li><span class="check" aria-hidden="true">✓</span> Planificación estratégica para España, UE, México o EE.UU.</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Consultoría Online 1 a 1">Solicitar Mentoría</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =====================================================================
+         TAB PANEL 4: TRABAJO FREELANCE (AMAZON CATALOG & SP-API MANAGEMENT)
+         ===================================================================== -->
+    <div role="tabpanel" id="panel-freelance" aria-labelledby="tab-freelance" class="tab-panel hidden" hidden tabindex="0">
+      
+      <!-- Freelance Hero Section -->
+      <section class="hero-section">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="container hero-container">
+          <div class="hero-content-left">
+            <div class="badge-container">
+              <span class="badge badge-primary">🛠️ Gestión de Catálogo Amazon</span>
+              <span class="badge badge-accent">⚡ Bulk Flat Files &amp; Listings</span>
+              <span class="badge badge-date">🔌 Integración SP-API &amp; ERP</span>
+            </div>
+            <h1 class="hero-title">
+              Gestión Freelance de Catálogo Amazon: <span class="gradient-text">Listings Masivos y SP-API</span> a Medida.
+            </h1>
+            <p class="hero-subtitle">
+              Servicios de ejecución técnica directa para marcas y fabricantes: redacto y subo tus listings mediante plantillas flat file masivas, gestiono Brand Registry y diseño contenido A+ / Brand Store, traduzco y adapto catálogos bilingües (España, México y EE.UU.) y desarrollo integraciones a medida con la Amazon Selling Partner API (SP-API) para sincronizar pedidos, stock y precios con tu ERP.
+            </p>
+            
+            <ul class="hero-benefits">
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🚀</span>
+                <span><strong>Listings Listos para Vender:</strong> Redacción SEO, atributos optimizados para el algoritmo de Amazon y matrices complejas parent-child sin errores.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🌐</span>
+                <span><strong>Expansión Multimercado (ES, MX, US &amp; UE):</strong> Adaptación cultural de textos (inglés americano, español peninsular y mexicano) y categorización con Browse Tree Guides locales.</span>
+              </li>
+              <li>
+                <span class="benefit-bullet" aria-hidden="true">🔌</span>
+                <span><strong>Automatización SP-API &amp; Conexión ERP:</strong> Conexión técnica entre Amazon Seller Central y tus bases de datos, WooCommerce, Shopify o software de facturación.</span>
+              </li>
+            </ul>
+
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-primary btn-lg btn-shine select-service-cta" data-service-value="Gestión Freelance Amazon">Pedir Presupuesto de Catálogo</a>
+              <a href="#capacidades-freelance" class="btn btn-outline btn-lg">Ver Capacidades de Ejecución</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual-right">
+            <!-- Simulated Project Dashboard Mockup -->
+            <div class="mock-project-card">
+              <div class="project-stats-mini">
+                <div class="mini-stat">
+                  <div class="mini-stat-val">10k+</div>
+                  <div class="mini-stat-lbl">Listings Subidos</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val">100%</div>
+                  <div class="mini-stat-lbl">Guías Amazon</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val">4</div>
+                  <div class="mini-stat-lbl">Marketplaces</div>
+                </div>
+              </div>
+
+              <div class="code-snippet-box">
+                <span style="color:#f43f5e;">// Amazon SP-API &amp; Catalog Pipeline</span><br>
+                <span style="color:#6366f1;">import</span> { SellingPartnerAPI } <span style="color:#6366f1;">from</span> <span style="color:#10b981;">'@amazon/sp-api'</span>;<br>
+                <span style="color:#6366f1;">export const</span> amazonWorkflow = {<br>
+                &nbsp;&nbsp;marketplaces: [<span style="color:#38bdf8;">'ES'</span>, <span style="color:#38bdf8;">'EU'</span>, <span style="color:#38bdf8;">'MX'</span>, <span style="color:#38bdf8;">'US'</span>],<br>
+                &nbsp;&nbsp;catalog: <span style="color:#38bdf8;">'Flat File (.xlsx / .csv) &amp; JSON'</span>,<br>
+                &nbsp;&nbsp;apis: [<span style="color:#10b981;">'Listings Items API'</span>, <span style="color:#10b981;">'Orders API'</span>, <span style="color:#10b981;">'Reports API'</span>],<br>
+                &nbsp;&nbsp;sync: <span style="color:#38bdf8;">'Real-time Stock &amp; Price Automation'</span><br>
+                };
+              </div>
+
+              <div class="tech-pills-wrap">
+                <span class="tech-pill">📦 Bulk Flat Files</span>
+                <span class="tech-pill">🏷️ GS1 / EAN Mapping</span>
+                <span class="tech-pill">🛡️ Brand Registry &amp; A+</span>
+                <span class="tech-pill">🇺🇸 Amazon US</span>
+                <span class="tech-pill">🇲🇽 Amazon MX</span>
+                <span class="tech-pill">🇪🇺 Amazon EU</span>
+                <span class="tech-pill">🔌 SP-API</span>
+                <span class="tech-pill">🐍 Python / Node Automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar Freelance -->
+      <section class="stats-section" aria-label="Estadísticas de Gestión Freelance Amazon">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="10000">0</span><span class="stat-suffix">+</span>
+              </div>
+              <p class="stat-label">Listings y ASINs procesados</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+              </div>
+              <p class="stat-label">Cumplimiento de guías de estilo</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="4">0</span>
+              </div>
+              <p class="stat-label">Marketplaces (ES, EU, MX, US)</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-value">
+                <span class="stat-num" data-target="0">0</span><span class="stat-suffix">€</span>
+              </div>
+              <p class="stat-label">Costes ocultos ni sorpresas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Freelance Capabilities -->
+      <section id="capacidades-freelance" class="features-section scroll-reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Capacidades de Ejecución</span>
+            <h2>Servicios Técnicos de Catálogo Amazon que Realizo</h2>
+            <p class="section-subtitle">
+              Trabajo directo en tus plantillas y código para que no tengas que pelear con la burocracia técnica de Seller Central.
+            </p>
+          </div>
+          <div class="service-cards-grid">
+            
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">📋</div>
+              <h3>Subida Masiva vía Flat Files (CSV / Excel)</h3>
+              <p>Creación y subida de ficheros de carga masiva de inventario con matrices completas de variación (color/talla), asignación de nodos de navegación y validación sin errores de procesado.</p>
+              <span class="service-card-tag">Flat Files • Feeds • Matrices Parent-Child</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">✍️</div>
+              <h3>Copywriting &amp; SEO de Listings Bilingüe</h3>
+              <p>Investigación exhaustiva de palabras clave de alto volumen y baja competencia. Redacción comercial de títulos, 5 bullet points y descripciones adaptadas a España, México y EE.UU.</p>
+              <span class="service-card-tag">SEO Amazon • ES / MX / US • Helium 10</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🎨</div>
+              <h3>Diseño de Contenido A+ (EBC) y Brand Store</h3>
+              <p>Creación visual y maquetación de módulos enriquecidos A+, tablas comparativas de producto y tienda oficial Brand Store en Seller Central para disparar tu tasa de conversión.</p>
+              <span class="service-card-tag">Contenido A+ • Brand Store • Conversión</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🔌</div>
+              <h3>Integraciones a Medida con Amazon SP-API</h3>
+              <p>Desarrollo de conectores y microservicios en Node.js o Python con la Selling Partner API para descarga automática de pedidos, sincronización de existencias y conciliación de tarifas.</p>
+              <span class="service-card-tag">SP-API • Webhooks • Node.js • Python</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🛡️</div>
+              <h3>Brand Registry &amp; Protección de Listings</h3>
+              <p>Inscripción formal de tu marca registrada ante Amazon, activación del Brand Dashboard, control de distribuidores autorizados y protección de Buy Box frente a vendedores no autorizados.</p>
+              <span class="service-card-tag">Brand Registry • Buy Box • Protección Marca</span>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-icon" aria-hidden="true">🔄</div>
+              <h3>Sincronización Multimercado (EU ⇄ US ⇄ MX)</h3>
+              <p>Localización y duplicación técnica de ofertas entre Amazon España, portales europeos, Amazon USA y Amazon México, enlazando reseñas globales y manteniendo inventarios alineados.</p>
+              <span class="service-card-tag">Cross-Border • Build International Listings</span>
+            </div>
+
+          </div>
+
+          <!-- Freelance Engagement Models -->
+          <div class="packages-grid">
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Pack Lanzamiento de Listing / ASIN</h3>
+                <p class="package-desc">Investigación SEO, redacción bilingüe y subida completa</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">Desde 290€</span>
+                <span class="period-label">/ proyecto</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Investigación de palabras clave para España, México o EE.UU.</li>
+                <li><span class="check" aria-hidden="true">✓</span> Redacción optimizada de título, bullets y descripción</li>
+                <li><span class="check" aria-hidden="true">✓</span> Subida manual o vía flat file sin errores de código GS1</li>
+                <li><span class="check" aria-hidden="true">✓</span> Maquetación de módulos básicos de Contenido A+</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Gestión Freelance Amazon">Pedir Presupuesto de Listing</a>
+            </div>
+
+            <div class="package-card featured-package">
+              <span class="package-popular-tag">Expansión Completa</span>
+              <div class="package-header">
+                <h3>Gestión Integral de Catálogo &amp; Expansión</h3>
+                <p class="package-desc">Catálogo completo listo para vender en múltiples mercados</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">Desde 950€</span>
+                <span class="period-label">/ catálogo</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Subida masiva de hasta 50 ASINs con variaciones completas</li>
+                <li><span class="check" aria-hidden="true">✓</span> Configuración en Amazon España, Europa, México y EE.UU.</li>
+                <li><span class="check" aria-hidden="true">✓</span> Creación de Brand Store oficial multipágina y A+ Premium</li>
+                <li><span class="check" aria-hidden="true">✓</span> Configuración inicial de envíos FBA y checklist aduanero</li>
+                <li><span class="check" aria-hidden="true">✓</span> 30 días de soporte post-entrega para resolver incidencias</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary btn-block select-service-cta" data-service-value="Gestión Freelance Amazon">Iniciar Expansión de Catálogo</a>
+            </div>
+
+            <div class="package-card">
+              <div class="package-header">
+                <h3>Integración SP-API / Automatización</h3>
+                <p class="package-desc">Conexión técnica entre Amazon y tus sistemas internos</p>
+              </div>
+              <div class="package-price">
+                <span class="amount-label">45€</span>
+                <span class="period-label">/ hora</span>
+              </div>
+              <ul class="package-features">
+                <li><span class="check" aria-hidden="true">✓</span> Conexión de catálogo y pedidos con tu ERP o base de datos</li>
+                <li><span class="check" aria-hidden="true">✓</span> Sincronización automática de stock y precios en tiempo real</li>
+                <li><span class="check" aria-hidden="true">✓</span> Descarga automatizada de informes de comisiones y ventas</li>
+                <li><span class="check" aria-hidden="true">✓</span> Paquetes desde 20 horas o por presupuesto cerrado</li>
+              </ul>
+              <a href="#contacto" class="btn btn-secondary btn-block select-service-cta" data-service-value="Gestión Freelance Amazon">Contratar Automatización</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =====================================================================
+         UNIFIED CONTACT & LEAD INQUIRY SECTION (ALL SERVICES)
+         ===================================================================== -->
+    <section id="contacto" class="contact-section scroll-reveal">
+      <div class="container contact-container">
+        <div class="contact-text">
+          <span class="section-tag" id="contact-badge-tag">Hablemos de tu Proyecto</span>
+          <h2 id="contact-heading">¿Listo para dar el siguiente paso?</h2>
+          <p id="contact-desc">
+            Rellena el formulario con tus datos y la opción en la que estás interesado. Te responderé en menos de 24 horas por WhatsApp o email con una propuesta adaptada a tus necesidades.
+          </p>
+          
+          <div class="pricing-card" id="contact-summary-card">
+            <div class="pricing-header">
+              <h3 id="card-service-title">Clases de Inglés en Grupo</h3>
+              <p class="pricing-desc" id="card-service-desc">Máximo 4 alumnos por clase</p>
+            </div>
+            <div class="pricing-price" id="card-pricing-wrap">
+              <span class="currency">€</span>
+              <span class="amount" id="card-price-amount">79</span>
+              <span class="period" id="card-price-period">/ mes</span>
+            </div>
+            <ul class="pricing-features" id="card-features-list">
+              <li>🔋 Clases online 100% prácticas</li>
+              <li>💬 Foco principal en conversación y fluidez</li>
+              <li>📝 Materiales incluidos y correcciones personalizadas</li>
+              <li>🚫 Sin cuota de inscripción ni permanencia</li>
+            </ul>
+          </div>
+
+          <!-- Urgency / Social Proof -->
+          <div class="urgency-bar" id="contact-urgency-bar">
+            <span class="urgency-dot"></span>
+            <p id="contact-urgency-text"><strong>Respuesta garantizada</strong> en menos de 24 horas</p>
+          </div>
+
+          <!-- Direct Email Box -->
+          <div class="direct-contact-pill">
+            <span>✉️ Correo directo:</span>
+            <a href="mailto:aishwarya.gupta.khera@gmail.com" style="color:var(--accent-secondary); font-weight:600;">aishwarya.gupta.khera@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form id="lead-form" novalidate>
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="ea8c15b5-61bc-48c5-9f7e-ee143b9966f3">
+            <!-- Web3Forms subject -->
+            <input type="hidden" name="subject" id="web3-subject" value="¡NUEVO CONTACTO! Solicitud desde englishwithaish.online">
+            
+            <!-- Honeypot field for spam prevention -->
+            <div class="visually-hidden">
+              <label for="website_url">No rellenar este campo</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Service Selection Dropdown -->
+            <div class="form-group">
+              <label for="service-select">¿En qué servicio estás interesado?</label>
+              <select id="service-select" name="service" class="form-select">
+                <option value="Clases de Inglés (Grupos de 4)">🎓 Clases de Inglés (Grupos de 4 • 79€/mes)</option>
+                <option value="Consultoría Amazon &amp; IT">📦 Consultoría Amazon &amp; IT (Listings, Operativa FBA y Mercados EU/ES/MX/US)</option>
+                <option value="Consultoría Online 1 a 1">🌐 Consultoría Online 1 a 1 (Seller Central en Directo por Videollamada)</option>
+                <option value="Gestión Freelance Amazon">🚀 Gestión Freelance Amazon (Catálogo, Flat Files &amp; SP-API)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Tu Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ej. María García">
+              <span class="error-msg" id="name-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="Ej. maria@correo.com">
+              <span class="error-msg" id="email-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Número de WhatsApp / Teléfono</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" value="+34 " placeholder="Ej. +34 600 000 000">
+              <span class="error-msg" id="phone-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Dynamic Context Field: English Level Radios (Shown for English) -->
+            <fieldset class="form-group fieldset-group dynamic-field-wrapper" id="english-level-group">
+              <legend>¿Cuál es tu nivel de inglés actual?</legend>
+              <div class="radio-grid">
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Principiante (A1-A2)" checked>
+                  <span>Principiante (A1-A2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Intermedio (B1-B2)">
+                  <span>Intermedio (B1-B2)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="level" value="Avanzado (C1-C2)">
+                  <span>Avanzado (C1-C2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Dynamic Context Field: Project / Consultation Details (Shown for Amazon, IT, Online & Freelance) -->
+            <div class="form-group dynamic-field-wrapper hidden" id="project-details-group">
+              <label for="project-details">Cuéntanos sobre tu proyecto o consulta de Amazon / IT</label>
+              <textarea id="project-details" name="project_details" rows="3" placeholder="Cuéntanos qué productos deseas vender, en qué mercados (España, Europa, México o EE.UU.) y qué necesitas resolver (listings, errores 5665/8572, FBA, SP-API)..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-shine" id="submit-btn" style="margin-top: 1rem;">
+              <span class="btn-text" id="submit-btn-text">Reservar mi plaza por WhatsApp</span>
+              <span class="spinner hidden"></span>
+            </button>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem;">
+              🔒 Te contactaré por WhatsApp o email en menos de 24 horas. Tus datos están 100% seguros.
+            </p>
+          </form>
+
+          <!-- Success Alert Container -->
+          <div id="form-success" class="success-container hidden">
+            <div class="success-icon" aria-hidden="true">🎉</div>
+            <h3 id="success-title">¡Solicitud Recibida con Éxito!</h3>
+            <p id="success-msg">Gracias por tu interés. Hemos guardado tu solicitud correctamente. Te contactaremos en menos de 24 horas por WhatsApp o email para coordinar los detalles.</p>
+            <button class="btn btn-outline" id="reset-form-btn">Enviar otra consulta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-grid-container">
+      <div class="footer-col footer-col-brand">
+        <a href="#english" class="logo footer-logo">
+          <span class="logo-accent">englishwithaish</span><span>.online</span>
+        </a>
+        <p class="footer-desc">
+          Plataforma de formación lingüística de alto rendimiento, consultoría tecnológica IT &amp; cloud, mentoría 1 a 1 y desarrollo de software freelance full-stack.
+        </p>
+        <p id="secret-admin-trigger" style="cursor: default;" title="Panel interno">© 2026 englishwithaish.online. Todos los derechos reservados.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Servicios</h4>
+        <ul class="footer-links-list">
+          <li><a href="#english" class="footer-nav-link" data-tab-target="english">🎓 Clases de Inglés (Grupos de 4)</a></li>
+          <li><a href="#it-consulting" class="footer-nav-link" data-tab-target="it-consulting">💻 Consultoría IT &amp; Cloud</a></li>
+          <li><a href="#online-consulting" class="footer-nav-link" data-tab-target="online-consulting">🌐 Consultoría Online 1 a 1</a></li>
+          <li><a href="#freelance" class="footer-nav-link" data-tab-target="freelance">🚀 Trabajo Freelance Full-Stack</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal &amp; Normativa</h4>
+        <ul class="footer-links-list">
+          <li><a href="legal.html#terminos" class="footer-nav-link open-legal-dialog" data-legal-target="terminos">📜 Términos y Condiciones</a></li>
+          <li><a href="legal.html#disclaimer" class="footer-nav-link open-legal-dialog" data-legal-target="disclaimer">⚖️ Aviso Legal &amp; Disclaimer</a></li>
+          <li><a href="legal.html#privacidad" class="footer-nav-link open-legal-dialog" data-legal-target="privacidad">🔒 Política de Privacidad (RGPD)</a></li>
+          <li><a href="legal.html#reembolso" class="footer-nav-link open-legal-dialog" data-legal-target="reembolso">🔄 Cancelación y Reembolso</a></li>
+          <li><a href="legal.html#contratos" class="footer-nav-link open-legal-dialog" data-legal-target="contratos">📑 Contratos y Acuerdos Tipo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contacto Directo</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="icon" aria-hidden="true">✉️</span>
+            <a href="mailto:aishwarya.gupta.khera@gmail.com" class="footer-email-link">aishwarya.gupta.khera@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">💬</span>
+            <a href="https://wa.me/34673275711" target="_blank" rel="noopener noreferrer">+34 673 275 711 (WhatsApp)</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">📍</span>
+            <span>Bilbao, España</span>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">🔗</span>
+            <a href="https://www.linkedin.com/in/aishwarya-gupta-k-3612b3221/details/experience/" target="_blank" rel="noopener noreferrer">Perfil en LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal Modal Dialog for In-Page Quick Reading -->
+  <dialog id="legal-dialog" class="legal-modal">
+    <div class="legal-modal-content">
+      <div class="legal-modal-header">
+        <div class="legal-modal-tabs" role="tablist" aria-label="Pestañas de documentos legales">
+          <button type="button" class="legal-tab-btn active" data-legal-tab="terminos">📜 Términos</button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="disclaimer">⚖️ Disclaimer</button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="privacidad">🔒 Privacidad (RGPD)</button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="reembolso">🔄 Cancelación &amp; Reembolso</button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="contratos">📑 Contratos Estándar</button>
+        </div>
+        <div class="legal-modal-actions">
+          <a href="legal.html" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" title="Abrir página legal completa">↗ Ver Completa</a>
+          <button id="close-legal-dialog" class="btn-close-modal" aria-label="Cerrar modal legal">&times;</button>
+        </div>
+      </div>
+      <div class="legal-modal-body" id="legal-modal-body">
+        <!-- Injected via JavaScript from legal content dictionary -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Admin Modal Panel for Viewing Leads (localStorage Dashboard) -->
+  <dialog id="admin-dialog" class="admin-modal">
+    <div class="admin-modal-content">
+      <div class="admin-modal-header">
+        <h2>Leads Recibidos (Dashboard Multi-Servicio)</h2>
+        <button id="close-admin" class="btn-close-modal" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="admin-modal-body">
+        <div class="admin-actions">
+          <div class="admin-info-badge">
+            Total registrados: <strong id="total-leads-count">0</strong>
+          </div>
+          <div class="admin-button-group">
+            <button id="export-leads" class="btn btn-secondary btn-sm">📥 Descargar CSV</button>
+            <button id="clear-leads" class="btn btn-outline btn-sm danger-text">⚠️ Borrar todos</button>
+          </div>
+        </div>
+        
+        <div class="table-container">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Servicio</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Nivel / Detalle</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="leads-tbody">
+              <tr>
+                <td colspan="7" class="text-center empty-state">No hay leads registrados aún.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating Call To Action -->
+  <a href="#contacto" class="floating-cta" id="floating-cta" aria-label="Reserva tu plaza o consulta">
+    <span class="floating-cta-icon" id="floating-cta-icon" aria-hidden="true">🚀</span>
+    <span class="floating-cta-text" id="floating-cta-text">Reservar mi plaza</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
