@@ -533,12 +533,18 @@ document.addEventListener('DOMContentLoaded', () => {
      7. Animated Number Counters (All Stats Sections)
      ========================================================================== */
   function animateCounter(el) {
+    if (!el) return;
+    const target = parseFloat(el.getAttribute('data-target'));
+    if (isNaN(target)) return;
+    if (target === 0) {
+      el.textContent = '0';
+      return;
+    }
     if (el.dataset.animated === 'true') return;
     el.dataset.animated = 'true';
 
-    const target = parseFloat(el.getAttribute('data-target')) || 0;
-    const duration = 1600;
-    const step = 20;
+    const duration = 1200;
+    const step = 25;
     const increment = target / (duration / step);
     let current = 0;
 
@@ -547,22 +553,35 @@ document.addEventListener('DOMContentLoaded', () => {
       if (current >= target) {
         current = target;
         clearInterval(timer);
+        el.textContent = target >= 1000 ? (target === 10000 ? '10K' : target.toLocaleString('es-ES')) : target;
+      } else {
+        el.textContent = Math.floor(current);
       }
-      el.textContent = Math.floor(current);
     }, step);
   }
 
   const statNums = document.querySelectorAll('.stat-num[data-target]');
-  const statsObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
+  if ('IntersectionObserver' in window) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '50px 0px', threshold: 0.01 });
 
-  statNums.forEach(el => statsObserver.observe(el));
+    statNums.forEach(el => statsObserver.observe(el));
+  } else {
+    statNums.forEach(el => animateCounter(el));
+  }
+
+  // Animate counters immediately in current active panel
+  setTimeout(() => {
+    document.querySelectorAll('.tab-panel.active .stat-num[data-target]').forEach(el => {
+      animateCounter(el);
+    });
+  }, 100);
 
 
   /* ==========================================================================
