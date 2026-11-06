@@ -357,75 +357,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     5. Context-Sensitive Contact Form
+     5. Context-Sensitive Contact Scrolling & Navigation
      ========================================================================== */
-  const englishLevelGroup = document.getElementById('english-level-group');
-  const projectDetailsGroup = document.getElementById('project-details-group');
-  const submitBtnText = document.getElementById('submit-btn-text');
-  const web3Subject = document.getElementById('web3-subject');
-  const cardServiceTitle = document.getElementById('card-service-title');
-  const cardServiceDesc = document.getElementById('card-service-desc');
-  const cardPriceAmount = document.getElementById('card-price-amount');
-  const cardPricePeriod = document.getElementById('card-price-period');
-  const cardFeaturesList = document.getElementById('card-features-list');
-  const contactUrgencyText = document.getElementById('contact-urgency-text');
-
-  function syncServiceFormFields(serviceVal) {
-    if (serviceSelect && serviceSelect.value !== serviceVal) {
-      serviceSelect.value = serviceVal;
-    }
-
-    let foundTabKey = Object.keys(TAB_SERVICE_MAP).find(k => TAB_SERVICE_MAP[k].serviceVal === serviceVal) || 'english';
-    const config = TAB_SERVICE_MAP[foundTabKey];
-
-    if (serviceVal.includes('Inglés')) {
-      if (englishLevelGroup) englishLevelGroup.classList.remove('hidden');
-      if (projectDetailsGroup) projectDetailsGroup.classList.add('hidden');
-      if (submitBtnText) submitBtnText.textContent = 'Reservar mi plaza por WhatsApp';
-      if (web3Subject) web3Subject.value = '¡NUEVO ESTUDIANTE! Solicitud Clases de Inglés - englishwithaish.online';
-    } else {
-      if (englishLevelGroup) englishLevelGroup.classList.add('hidden');
-      if (projectDetailsGroup) projectDetailsGroup.classList.remove('hidden');
-
-      if (serviceVal.includes('Amazon') || serviceVal.includes('IT')) {
-        if (submitBtnText) submitBtnText.textContent = 'Solicitar Diagnóstico Amazon & IT';
-        if (web3Subject) web3Subject.value = '¡NUEVO CONTACTO! Solicitud Consultoría Amazon Marketplaces & IT';
-      } else if (serviceVal.includes('Online')) {
-        if (submitBtnText) submitBtnText.textContent = 'Agendar Sesión Seller Central';
-        if (web3Subject) web3Subject.value = '¡NUEVO CONTACTO! Solicitud Sesión 1 a 1 Seller Central';
-      } else {
-        if (submitBtnText) submitBtnText.textContent = 'Solicitar Presupuesto Amazon / Catálogo';
-        if (web3Subject) web3Subject.value = '¡NUEVO PROYECTO! Solicitud Gestión Catálogo / SP-API Freelance';
-      }
-    }
-
-    // Update left card summary
-    if (config) {
-      if (cardServiceTitle) cardServiceTitle.textContent = config.cardTitle;
-      if (cardServiceDesc) cardServiceDesc.textContent = config.cardDesc;
-      if (cardPriceAmount) cardPriceAmount.textContent = config.priceAmount;
-      if (cardPricePeriod) cardPricePeriod.textContent = config.pricePeriod;
-      if (cardFeaturesList) {
-        cardFeaturesList.innerHTML = config.features.map(f => `<li>${f}</li>`).join('');
-      }
-      if (contactUrgencyText) {
-        contactUrgencyText.innerHTML = config.urgency;
-      }
-    }
-  }
-
-  if (serviceSelect) {
-    serviceSelect.addEventListener('change', (e) => {
-      syncServiceFormFields(e.target.value);
-    });
-  }
-
-  // Intercept CTAs that preselect a service and scroll to contact
-  document.querySelectorAll('.select-service-cta').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const serviceVal = btn.getAttribute('data-service-value');
-      if (serviceVal) {
-        syncServiceFormFields(serviceVal);
+  document.querySelectorAll('a[href="#contacto"], .floating-cta').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const activePanel = document.querySelector('.tab-panel.active') || document.getElementById('panel-english');
+      const contactSection = activePanel ? activePanel.querySelector('.contact-section') : null;
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
@@ -623,18 +563,24 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      9. Form Validation & Submission (Web3Forms + LocalStorage Dashboard)
      ========================================================================== */
-  const form = document.getElementById('lead-form');
-  const formSuccess = document.getElementById('form-success');
-  const submitBtn = document.getElementById('submit-btn');
-  const resetFormBtn = document.getElementById('reset-form-btn');
+  const allLeadForms = document.querySelectorAll('.lead-form');
 
-  if (form) {
+  allLeadForms.forEach(form => {
+    const formContainer = form.closest('.form-container');
+    const formSuccess = formContainer ? formContainer.querySelector('.form-success') : null;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const resetFormBtn = formSuccess ? formSuccess.querySelector('.reset-form-btn') : null;
+
+    const nameInput = form.querySelector('input[name="name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const phoneInput = form.querySelector('input[name="phone"]');
+
     const fields = {
       name: {
-        input: document.getElementById('name'),
-        error: document.getElementById('name-error'),
+        input: nameInput,
+        error: nameInput ? nameInput.closest('.form-group')?.querySelector('.error-msg') : null,
         validate() {
-          if (!this.input.value.trim()) {
+          if (!this.input || !this.input.value.trim()) {
             this.showError('El nombre es obligatorio.');
             return false;
           }
@@ -643,9 +589,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       email: {
-        input: document.getElementById('email'),
-        error: document.getElementById('email-error'),
+        input: emailInput,
+        error: emailInput ? emailInput.closest('.form-group')?.querySelector('.error-msg') : null,
         validate() {
+          if (!this.input) return true;
           const value = this.input.value.trim();
           if (!value) {
             this.showError('El correo electrónico es obligatorio.');
@@ -661,9 +608,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       phone: {
-        input: document.getElementById('phone'),
-        error: document.getElementById('phone-error'),
+        input: phoneInput,
+        error: phoneInput ? phoneInput.closest('.form-group')?.querySelector('.error-msg') : null,
         validate() {
+          if (!this.input) return true;
           const value = this.input.value.trim();
           if (!value) {
             this.showError('El número de teléfono o WhatsApp es obligatorio.');
@@ -711,7 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const honeypot = document.getElementById('website_url')?.value;
+      const honeypot = form.querySelector('input[name="website_url"]')?.value;
       if (honeypot) { showSuccessView(); return; }
 
       let isValid = true;
@@ -725,22 +673,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      submitBtn.disabled = true;
-      submitBtn.querySelector('.btn-text')?.classList.add('hidden');
-      submitBtn.querySelector('.spinner')?.classList.remove('hidden');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.querySelector('.btn-text')?.classList.add('hidden');
+        submitBtn.querySelector('.spinner')?.classList.remove('hidden');
+      }
 
-      const selectedService = serviceSelect ? serviceSelect.value : 'Clases de Inglés';
-      const selectedLevel = form.querySelector('input[name="level"]:checked')?.value || 'N/A';
-      const projectDetails = document.getElementById('project-details')?.value || '';
+      const serviceVal = form.querySelector('input[name="service"]')?.value || 'Servicio';
+      const levelVal = form.querySelector('input[name="level"]:checked')?.value;
+      const detailsVal = form.querySelector('textarea')?.value || form.querySelector('select')?.value || '';
+      const detailStr = levelVal || detailsVal || 'Sin detalles adicionales';
 
       const newLead = {
         id: Date.now(),
         timestamp: new Date().toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' }),
-        service: selectedService,
-        name: fields.name.input.value.trim(),
-        email: fields.email.input.value.trim(),
-        phone: fields.phone.input.value.trim(),
-        detail: selectedService.includes('Inglés') ? selectedLevel : (projectDetails || 'Sin detalles adicionales')
+        service: serviceVal,
+        name: fields.name.input ? fields.name.input.value.trim() : '',
+        email: fields.email.input ? fields.email.input.value.trim() : '',
+        phone: fields.phone.input ? fields.phone.input.value.trim() : '',
+        detail: detailStr
       };
 
       // Save lead locally to admin dashboard
@@ -753,37 +704,31 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           body: formData
         });
-
         const data = await response.json();
-        if (data.success) {
-          showSuccessView();
-        } else {
-          // Fallback to success view anyway since local lead is saved
-          showSuccessView();
-        }
+        showSuccessView();
       } catch (error) {
         console.error('Error submitting form:', error);
-        // Show success view since lead is preserved in admin dashboard
         showSuccessView();
       }
     });
 
     resetFormBtn?.addEventListener('click', () => {
       form.reset();
-      submitBtn.disabled = false;
-      submitBtn.querySelector('.btn-text')?.classList.remove('hidden');
-      submitBtn.querySelector('.spinner')?.classList.add('hidden');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.btn-text')?.classList.remove('hidden');
+        submitBtn.querySelector('.spinner')?.classList.add('hidden');
+      }
       Object.keys(fields).forEach(key => fields[key]?.clearError());
       formSuccess?.classList.add('hidden');
       form.classList.remove('hidden');
-      syncServiceFormFields('Clases de Inglés (Grupos de 4)');
     });
 
     function showSuccessView() {
       form.classList.add('hidden');
       formSuccess?.classList.remove('hidden');
     }
-  }
+  });
 
   function saveLead(newLead) {
     const currentLeads = JSON.parse(localStorage.getItem('aish_multi_leads')) || [];
